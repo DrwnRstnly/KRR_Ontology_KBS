@@ -1,0 +1,380 @@
+@prefix : <http://example.org/clashroyale#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Ontology header
+#################################################################
+
+:ClashRoyaleOntology a owl:Ontology ;
+  rdfs:label "Clash Royale Ontology" ;
+  rdfs:comment "Starter OWL ontology for modeling Clash Royale cards, stats, and decks in Protégé." .
+
+#################################################################
+# Core classes
+#################################################################
+
+:Card a owl:Class ;
+  rdfs:label "Card" .
+
+:Troop a owl:Class ;
+  rdfs:subClassOf :Card ;
+  rdfs:label "Troop" .
+
+:Building a owl:Class ;
+  rdfs:subClassOf :Card ;
+  rdfs:label "Building" .
+
+:Spell a owl:Class ;
+  rdfs:subClassOf :Card ;
+  rdfs:label "Spell" .
+
+:Deck a owl:Class ;
+  rdfs:label "Deck" .
+
+:Rarity a owl:Class ;
+  rdfs:label "Rarity" .
+
+:Arena a owl:Class ;
+  rdfs:label "Arena" .
+
+:TargetType a owl:Class ;
+  rdfs:label "TargetType" .
+
+:DamageType a owl:Class ;
+  rdfs:label "DamageType" .
+
+:RangeType a owl:Class ;
+  rdfs:label "RangeType" .
+
+:SpeedClass a owl:Class ;
+  rdfs:label "SpeedClass" .
+
+:Ability a owl:Class ;
+  rdfs:label "Ability" .
+
+:WinCondition a owl:Class ;
+  rdfs:label "WinCondition" .
+
+#################################################################
+# Disjointness axioms
+#################################################################
+
+[ a owl:AllDisjointClasses ;
+  owl:members ( :Troop :Building :Spell )
+] .
+
+#################################################################
+# Object properties
+#################################################################
+
+:hasRarity a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Rarity ;
+  rdfs:label "hasRarity" ;
+  owl:functionalProperty true .
+
+:inArena a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Arena ;
+  rdfs:label "inArena" .
+
+:hasTargetType a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :TargetType ;
+  rdfs:label "hasTargetType" .
+
+:hasDamageType a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :DamageType ;
+  rdfs:label "hasDamageType" .
+
+:hasRangeType a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :RangeType ;
+  rdfs:label "hasRangeType" .
+
+:hasSpeedClass a owl:ObjectProperty ;
+  rdfs:domain :Troop ;
+  rdfs:range :SpeedClass ;
+  rdfs:label "hasSpeedClass" .
+
+:hasAbility a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Ability ;
+  rdfs:label "hasAbility" .
+
+:synergizesWith a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Card ;
+  owl:SymmetricProperty true ;
+  rdfs:label "synergizesWith" .
+
+:counters a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Card ;
+  rdfs:label "counters" .
+
+:hasCard a owl:ObjectProperty ;
+  rdfs:domain :Deck ;
+  rdfs:range :Card ;
+  rdfs:label "hasCard" ;
+  owl:inverseOf :isInDeck .
+
+:isInDeck a owl:ObjectProperty ;
+  rdfs:domain :Card ;
+  rdfs:range :Deck ;
+  rdfs:label "isInDeck" .
+
+:usesWinCondition a owl:ObjectProperty ;
+  rdfs:domain :Deck ;
+  rdfs:range :WinCondition ;
+  rdfs:label "usesWinCondition" .
+
+#################################################################
+# Datatype properties
+#################################################################
+
+:elixirCost a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:integer ;
+  rdfs:label "elixirCost" .
+
+:hitpoints a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:integer ;
+  rdfs:label "hitpoints" .
+
+:damage a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:integer ;
+  rdfs:label "damage" .
+
+:dps a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "dps" .
+
+:attackSpeed a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "attackSpeed" .
+
+:range a owl:DatatypeProperty ;
+  rdfs:domain :Card ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "range" .
+
+:radius a owl:DatatypeProperty ;
+  rdfs:domain :Spell ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "radius" .
+
+:lifetime a owl:DatatypeProperty ;
+  rdfs:domain :Building ;
+  rdfs:range xsd:decimal ;
+  rdfs:label "lifetime" .
+
+:arenaLevel a owl:DatatypeProperty ;
+  rdfs:domain :Arena ;
+  rdfs:range xsd:integer ;
+  rdfs:label "arenaLevel" .
+
+#################################################################
+# Enumerations and individuals
+#################################################################
+
+# Rarities
+:Common a :Rarity ; rdfs:label "Common" .
+:Rare a :Rarity ; rdfs:label "Rare" .
+:Epic a :Rarity ; rdfs:label "Epic" .
+:Legendary a :Rarity ; rdfs:label "Legendary" .
+:Champion a :Rarity ; rdfs:label "Champion" .
+
+# Target types
+:Ground a :TargetType ; rdfs:label "Ground" .
+:Air a :TargetType ; rdfs:label "Air" .
+:GroundAndAir a :TargetType ; rdfs:label "GroundAndAir" .
+:BuildingsOnly a :TargetType ; rdfs:label "BuildingsOnly" .
+
+# Damage types
+:Melee a :DamageType ; rdfs:label "Melee" .
+:Ranged a :DamageType ; rdfs:label "Ranged" .
+:AreaDamage a :DamageType ; rdfs:label "AreaDamage" .
+:SpellDamage a :DamageType ; rdfs:label "SpellDamage" .
+
+# Range types
+:MeleeRange a :RangeType ; rdfs:label "MeleeRange" .
+:ShortRange a :RangeType ; rdfs:label "ShortRange" .
+:MediumRange a :RangeType ; rdfs:label "MediumRange" .
+:LongRange a :RangeType ; rdfs:label "LongRange" .
+
+# Speed classes
+:Slow a :SpeedClass ; rdfs:label "Slow" .
+:Medium a :SpeedClass ; rdfs:label "Medium" .
+:Fast a :SpeedClass ; rdfs:label "Fast" .
+
+# Arenas
+:TrainingCamp a :Arena ; rdfs:label "Training Camp" ; :arenaLevel 0 .
+:GoblinStadium a :Arena ; rdfs:label "Goblin Stadium" ; :arenaLevel 1 .
+
+# Win conditions
+:HogWincon a :WinCondition ; rdfs:label "Hog Pressure" .
+
+#################################################################
+# Example cards
+#################################################################
+
+:HogRider a :Troop ;
+  rdfs:label "Hog Rider" ;
+  :hasRarity :Rare ;
+  :inArena :GoblinStadium ;
+  :hasTargetType :BuildingsOnly ;
+  :hasDamageType :Melee ;
+  :hasRangeType :MeleeRange ;
+  :hasSpeedClass :Fast ;
+  :elixirCost 4 ;
+  :hitpoints 1400 ;
+  :damage 264 ;
+  :attackSpeed 1.6 .
+
+:Fireball a :Spell ;
+  rdfs:label "Fireball" ;
+  :hasRarity :Rare ;
+  :inArena :GoblinStadium ;
+  :hasDamageType :SpellDamage ;
+  :hasRangeType :LongRange ;
+  :elixirCost 4 ;
+  :radius 2.5 .
+
+:Cannon a :Building ;
+  rdfs:label "Cannon" ;
+  :hasRarity :Common ;
+  :inArena :GoblinStadium ;
+  :hasTargetType :Ground ;
+  :hasDamageType :Ranged ;
+  :hasRangeType :MediumRange ;
+  :elixirCost 3 ;
+  :lifetime 30.0 ;
+  :damage 100 ;
+  :hitpoints 900 .
+
+:Musketeer a :Troop ;
+  rdfs:label "Musketeer" ;
+  :hasRarity :Rare ;
+  :inArena :GoblinStadium ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :Ranged ;
+  :hasRangeType :LongRange ;
+  :hasSpeedClass :Medium ;
+  :elixirCost 4 ;
+  :hitpoints 598 ;
+  :damage 218 ;
+  :attackSpeed 1.1 .
+
+:IceGolem a :Troop ;
+  rdfs:label "Ice Golem" ;
+  :hasRarity :Rare ;
+  :inArena :GoblinStadium ;
+  :hasTargetType :BuildingsOnly ;
+  :hasDamageType :Melee ;
+  :hasRangeType :MeleeRange ;
+  :hasSpeedClass :Slow ;
+  :elixirCost 2 ;
+  :hitpoints 900 ;
+  :damage 27 .
+
+:Skeletons a :Troop ;
+  rdfs:label "Skeletons" ;
+  :hasRarity :Common ;
+  :inArena :TrainingCamp ;
+  :hasTargetType :Ground ;
+  :hasDamageType :Melee ;
+  :hasRangeType :MeleeRange ;
+  :hasSpeedClass :Fast ;
+  :elixirCost 1 ;
+  :hitpoints 67 ;
+  :damage 67 ;
+  :attackSpeed 1.0 .
+
+:IceSpirit a :Troop ;
+  rdfs:label "Ice Spirit" ;
+  :hasRarity :Common ;
+  :inArena :TrainingCamp ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :AreaDamage ;
+  :hasRangeType :ShortRange ;
+  :hasSpeedClass :Fast ;
+  :elixirCost 1 ;
+  :hitpoints 190 ;
+  :damage 90 .
+
+:TheLog a :Spell ;
+  rdfs:label "The Log" ;
+  :hasRarity :Legendary ;
+  :inArena :GoblinStadium ;
+  :hasDamageType :SpellDamage ;
+  :hasRangeType :LongRange ;
+  :elixirCost 2 ;
+  :radius 1.5 .
+
+#################################################################
+# Relationships among cards
+#################################################################
+
+:HogRider :synergizesWith :IceGolem .
+:HogRider :synergizesWith :Fireball .
+:Cannon :counters :HogRider .
+:TheLog :counters :Skeletons .
+
+#################################################################
+# Example deck with a cardinality constraint
+#################################################################
+
+# Deck must have exactly 8 cards
+:hasCardExact8 a owl:Class ;
+  owl:equivalentClass [ a owl:Class ;
+    owl:intersectionOf (
+      :Deck
+      [ a owl:Restriction ; owl:onProperty :hasCard ; owl:qualifiedCardinality "8"^^xsd:nonNegativeInteger ; owl:onClass :Card ]
+    )
+  ] ;
+  rdfs:label "DeckWithExactly8Cards" .
+
+:HogCycleDeck a :Deck , :hasCardExact8 ;
+  rdfs:label "Hog Cycle Deck" ;
+  :usesWinCondition :HogWincon ;
+  :hasCard :HogRider , :Fireball , :Cannon , :Musketeer , :IceGolem , :Skeletons , :IceSpirit , :TheLog .
+
+#################################################################
+# Helpful class definitions
+#################################################################
+
+# Wincon card pattern: cards that target buildings directly
+:WinconCard a owl:Class ;
+  owl:equivalentClass [ a owl:Class ;
+    owl:intersectionOf ( :Card [ a owl:Restriction ; owl:onProperty :hasTargetType ; owl:hasValue :BuildingsOnly ] )
+  ] ;
+  rdfs:label "WinconCard" .
+
+# Ranged troops
+:RangedTroop a owl:Class ;
+  owl:equivalentClass [ a owl:Class ;
+    owl:intersectionOf ( :Troop [ a owl:Restriction ; owl:onProperty :hasDamageType ; owl:hasValue :Ranged ] )
+  ] ;
+  rdfs:label "RangedTroop" .
+
+#################################################################
+# Annotations and notes
+#################################################################
+
+:HogRider rdfs:comment "Fast ground troop that targets buildings" .
+:Fireball rdfs:comment "Medium radius spell for finishing troops and towers" .
+:Cannon rdfs:comment "Cheap defensive building" .
+:Musketeer rdfs:comment "Long range single target support" .
+:IceGolem rdfs:comment "Cheap tank with death slow" .
+:Skeletons rdfs:comment "Cycle, kite, and dps for 1 elixir" .
+:IceSpirit rdfs:comment "Cycle and freeze effect" .
+:TheLog rdfs:comment "Rolls and knocks back ground units" .

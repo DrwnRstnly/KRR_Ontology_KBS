@@ -1,0 +1,860 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/clashroyale#"
+     xml:base="http://example.org/clashroyale"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     <owl:Ontology rdf:about="urn:webprotege:ontology:09e23dab-8733-417d-bb6f-7eb1b504d40a"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#SymmetricProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#functionalProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#functionalProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/clashroyale#counters -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#counters">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>counters</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasAbility -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasAbility">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Ability"/>
+        <rdfs:label>hasAbility</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasCard -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasCard">
+        <owl:inverseOf rdf:resource="http://example.org/clashroyale#isInDeck"/>
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Deck"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>hasCard</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasDamageType -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasDamageType">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#DamageType"/>
+        <rdfs:label>hasDamageType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasRangeType -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasRangeType">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#RangeType"/>
+        <rdfs:label>hasRangeType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasRarity -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasRarity">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>hasRarity</rdfs:label>
+        <owl:functionalProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:functionalProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasSpeedClass -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasSpeedClass">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Troop"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#SpeedClass"/>
+        <rdfs:label>hasSpeedClass</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hasTargetType -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#hasTargetType">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#TargetType"/>
+        <rdfs:label>hasTargetType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#inArena -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#inArena">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Arena"/>
+        <rdfs:label>inArena</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#isInDeck -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#isInDeck">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Deck"/>
+        <rdfs:label>isInDeck</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#synergizesWith -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#synergizesWith">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>synergizesWith</rdfs:label>
+        <owl:SymmetricProperty rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:SymmetricProperty>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#usesWinCondition -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/clashroyale#usesWinCondition">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Deck"/>
+        <rdfs:range rdf:resource="http://example.org/clashroyale#WinCondition"/>
+        <rdfs:label>usesWinCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/clashroyale#arenaLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#arenaLevel">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Arena"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>arenaLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#attackSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#attackSpeed">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>attackSpeed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#damage -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#damage">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>damage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#dps -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#dps">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>dps</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#elixirCost -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#elixirCost">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>elixirCost</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#hitpoints -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#hitpoints">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>hitpoints</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#lifetime -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#lifetime">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>lifetime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#radius -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#radius">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Spell"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>radius</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.org/clashroyale#range -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/clashroyale#range">
+        <rdfs:domain rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>range</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/clashroyale#Ability -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Ability">
+        <rdfs:label>Ability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Arena -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Arena">
+        <rdfs:label>Arena</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Building -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Building">
+        <rdfs:subClassOf rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Card -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Card">
+        <rdfs:label>Card</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#DamageType -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#DamageType">
+        <rdfs:label>DamageType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Deck -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Deck">
+        <rdfs:label>Deck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#RangeType -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#RangeType">
+        <rdfs:label>RangeType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#RangedTroop -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#RangedTroop">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/clashroyale#Troop"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.org/clashroyale#hasDamageType"/>
+                        <owl:hasValue rdf:resource="http://example.org/clashroyale#Ranged"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>RangedTroop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Rarity -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Rarity">
+        <rdfs:label>Rarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#SpeedClass -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#SpeedClass">
+        <rdfs:label>SpeedClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Spell -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Spell">
+        <rdfs:subClassOf rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>Spell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#TargetType -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#TargetType">
+        <rdfs:label>TargetType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#Troop -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#Troop">
+        <rdfs:subClassOf rdf:resource="http://example.org/clashroyale#Card"/>
+        <rdfs:label>Troop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#WinCondition -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#WinCondition">
+        <rdfs:label>WinCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#WinconCard -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#WinconCard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/clashroyale#Card"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.org/clashroyale#hasTargetType"/>
+                        <owl:hasValue rdf:resource="http://example.org/clashroyale#BuildingsOnly"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>WinconCard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/clashroyale#hasCardExact8 -->
+
+    <owl:Class rdf:about="http://example.org/clashroyale#hasCardExact8">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.org/clashroyale#Deck"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.org/clashroyale#hasCard"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.org/clashroyale#Card"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label>DeckWithExactly8Cards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/clashroyale#Air -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Air">
+        <rdf:type rdf:resource="http://example.org/clashroyale#TargetType"/>
+        <rdfs:label>Air</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#AreaDamage -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#AreaDamage">
+        <rdf:type rdf:resource="http://example.org/clashroyale#DamageType"/>
+        <rdfs:label>AreaDamage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#BuildingsOnly -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#BuildingsOnly">
+        <rdf:type rdf:resource="http://example.org/clashroyale#TargetType"/>
+        <rdfs:label>BuildingsOnly</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Cannon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Cannon">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Building"/>
+        <counters rdf:resource="http://example.org/clashroyale#HogRider"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#Ranged"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#MediumRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Common"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#Ground"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</hitpoints>
+        <lifetime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</lifetime>
+        <rdfs:comment>Cheap defensive building</rdfs:comment>
+        <rdfs:label>Cannon</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Champion -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Champion">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>Champion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Common -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Common">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>Common</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Epic -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Epic">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>Epic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Fast -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Fast">
+        <rdf:type rdf:resource="http://example.org/clashroyale#SpeedClass"/>
+        <rdfs:label>Fast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Fireball -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Fireball">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Spell"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#SpellDamage"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#LongRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Rare"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</elixirCost>
+        <radius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</radius>
+        <rdfs:comment>Medium radius spell for finishing troops and towers</rdfs:comment>
+        <rdfs:label>Fireball</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#GoblinStadium -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#GoblinStadium">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Arena"/>
+        <arenaLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</arenaLevel>
+        <rdfs:label>Goblin Stadium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Ground -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Ground">
+        <rdf:type rdf:resource="http://example.org/clashroyale#TargetType"/>
+        <rdfs:label>Ground</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#GroundAndAir -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#GroundAndAir">
+        <rdf:type rdf:resource="http://example.org/clashroyale#TargetType"/>
+        <rdfs:label>GroundAndAir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#HogCycleDeck -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#HogCycleDeck">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Deck"/>
+        <rdf:type rdf:resource="http://example.org/clashroyale#hasCardExact8"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#Cannon"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#Fireball"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#HogRider"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#IceGolem"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#IceSpirit"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#Musketeer"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#Skeletons"/>
+        <hasCard rdf:resource="http://example.org/clashroyale#TheLog"/>
+        <usesWinCondition rdf:resource="http://example.org/clashroyale#HogWincon"/>
+        <rdfs:label>Hog Cycle Deck</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#HogRider -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#HogRider">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Troop"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#Melee"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#MeleeRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Rare"/>
+        <hasSpeedClass rdf:resource="http://example.org/clashroyale#Fast"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#BuildingsOnly"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <synergizesWith rdf:resource="http://example.org/clashroyale#Fireball"/>
+        <synergizesWith rdf:resource="http://example.org/clashroyale#IceGolem"/>
+        <attackSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.6</attackSpeed>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">264</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1400</hitpoints>
+        <rdfs:comment>Fast ground troop that targets buildings</rdfs:comment>
+        <rdfs:label>Hog Rider</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#HogWincon -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#HogWincon">
+        <rdf:type rdf:resource="http://example.org/clashroyale#WinCondition"/>
+        <rdfs:label>Hog Pressure</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#IceGolem -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#IceGolem">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Troop"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#Melee"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#MeleeRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Rare"/>
+        <hasSpeedClass rdf:resource="http://example.org/clashroyale#Slow"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#BuildingsOnly"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</hitpoints>
+        <rdfs:comment>Cheap tank with death slow</rdfs:comment>
+        <rdfs:label>Ice Golem</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#IceSpirit -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#IceSpirit">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Troop"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#AreaDamage"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#ShortRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Common"/>
+        <hasSpeedClass rdf:resource="http://example.org/clashroyale#Fast"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#GroundAndAir"/>
+        <inArena rdf:resource="http://example.org/clashroyale#TrainingCamp"/>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</hitpoints>
+        <rdfs:comment>Cycle and freeze effect</rdfs:comment>
+        <rdfs:label>Ice Spirit</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Legendary -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Legendary">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>Legendary</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#LongRange -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#LongRange">
+        <rdf:type rdf:resource="http://example.org/clashroyale#RangeType"/>
+        <rdfs:label>LongRange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Medium">
+        <rdf:type rdf:resource="http://example.org/clashroyale#SpeedClass"/>
+        <rdfs:label>Medium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#MediumRange -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#MediumRange">
+        <rdf:type rdf:resource="http://example.org/clashroyale#RangeType"/>
+        <rdfs:label>MediumRange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Melee -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Melee">
+        <rdf:type rdf:resource="http://example.org/clashroyale#DamageType"/>
+        <rdfs:label>Melee</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#MeleeRange -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#MeleeRange">
+        <rdf:type rdf:resource="http://example.org/clashroyale#RangeType"/>
+        <rdfs:label>MeleeRange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Musketeer -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Musketeer">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Troop"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#Ranged"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#LongRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Rare"/>
+        <hasSpeedClass rdf:resource="http://example.org/clashroyale#Medium"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#GroundAndAir"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <attackSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</attackSpeed>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">218</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">598</hitpoints>
+        <rdfs:comment>Long range single target support</rdfs:comment>
+        <rdfs:label>Musketeer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Ranged -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Ranged">
+        <rdf:type rdf:resource="http://example.org/clashroyale#DamageType"/>
+        <rdfs:label>Ranged</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Rare -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Rare">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Rarity"/>
+        <rdfs:label>Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#ShortRange -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#ShortRange">
+        <rdf:type rdf:resource="http://example.org/clashroyale#RangeType"/>
+        <rdfs:label>ShortRange</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Skeletons -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Skeletons">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Troop"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#Melee"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#MeleeRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Common"/>
+        <hasSpeedClass rdf:resource="http://example.org/clashroyale#Fast"/>
+        <hasTargetType rdf:resource="http://example.org/clashroyale#Ground"/>
+        <inArena rdf:resource="http://example.org/clashroyale#TrainingCamp"/>
+        <attackSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</attackSpeed>
+        <damage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</damage>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</elixirCost>
+        <hitpoints rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</hitpoints>
+        <rdfs:comment>Cycle, kite, and dps for 1 elixir</rdfs:comment>
+        <rdfs:label>Skeletons</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#Slow -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#Slow">
+        <rdf:type rdf:resource="http://example.org/clashroyale#SpeedClass"/>
+        <rdfs:label>Slow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#SpellDamage -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#SpellDamage">
+        <rdf:type rdf:resource="http://example.org/clashroyale#DamageType"/>
+        <rdfs:label>SpellDamage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#TheLog -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#TheLog">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Spell"/>
+        <counters rdf:resource="http://example.org/clashroyale#Skeletons"/>
+        <hasDamageType rdf:resource="http://example.org/clashroyale#SpellDamage"/>
+        <hasRangeType rdf:resource="http://example.org/clashroyale#LongRange"/>
+        <hasRarity rdf:resource="http://example.org/clashroyale#Legendary"/>
+        <inArena rdf:resource="http://example.org/clashroyale#GoblinStadium"/>
+        <elixirCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</elixirCost>
+        <radius rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</radius>
+        <rdfs:comment>Rolls and knocks back ground units</rdfs:comment>
+        <rdfs:label>The Log</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.org/clashroyale#TrainingCamp -->
+
+    <owl:NamedIndividual rdf:about="http://example.org/clashroyale#TrainingCamp">
+        <rdf:type rdf:resource="http://example.org/clashroyale#Arena"/>
+        <arenaLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</arenaLevel>
+        <rdfs:label>Training Camp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/clashroyale#Building"/>
+            <rdf:Description rdf:about="http://example.org/clashroyale#Spell"/>
+            <rdf:Description rdf:about="http://example.org/clashroyale#Troop"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
