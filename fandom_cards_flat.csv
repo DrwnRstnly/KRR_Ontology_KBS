@@ -1,0 +1,185 @@
+arena_number,arena_name,card_name,url,elixir,rarity,type,arena_text_on_card
+0,Training Camp,Arrows,https://clashroyale.fandom.com/wiki/Arrows,3.0,Common,Spell,Training Camp
+0,Training Camp,Minions,https://clashroyale.fandom.com/wiki/Minions,3.0,Common,Troop,Training Camp
+0,Training Camp,Archers,https://clashroyale.fandom.com/wiki/Archers,3.0,Common,Troop,Training Camp
+0,Training Camp,Knight,https://clashroyale.fandom.com/wiki/Knight,3.0,Common,Troop,Training Camp
+0,Training Camp,Fireball,https://clashroyale.fandom.com/wiki/Fireball,4.0,Rare,Spell,Training Camp
+0,Training Camp,Mini P.E.K.K.A.,https://clashroyale.fandom.com/wiki/Mini_P.E.K.K.A.,4.0,Rare,Troop,Training Camp
+0,Training Camp,Musketeer,https://clashroyale.fandom.com/wiki/Musketeer,4.0,Rare,Troop,Training Camp
+0,Training Camp,Giant,https://clashroyale.fandom.com/wiki/Giant,5.0,Rare,Troop,Training Camp
+0,Training Camp,Tower Princess,https://clashroyale.fandom.com/wiki/Tower_Princess,,Common,Tower Troop,Training Camp
+1,Goblin Stadium,Spear Goblins,https://clashroyale.fandom.com/wiki/Spear_Goblins,2.0,Common,Troop,Goblin Stadium
+1,Goblin Stadium,Goblins,https://clashroyale.fandom.com/wiki/Goblins,2.0,Common,Troop,Goblin Stadium
+1,Goblin Stadium,Goblin Cage,https://clashroyale.fandom.com/wiki/Goblin_Cage,4.0,Rare,Building,Goblin Stadium
+1,Goblin Stadium,Goblin Hut,https://clashroyale.fandom.com/wiki/Goblin_Hut,4.0,Rare,Building,Goblin Stadium
+1,Goblin Stadium,Goblins,https://clashroyale.fandom.com/wiki/Goblins,2.0,Common,Troop,Goblin Stadium
+1,Goblin Stadium,Spear Goblins,https://clashroyale.fandom.com/wiki/Spear_Goblins,2.0,Common,Troop,Goblin Stadium
+1,Goblin Stadium,Goblin Cage,https://clashroyale.fandom.com/wiki/Goblin_Cage,4.0,Rare,Building,Goblin Stadium
+1,Goblin Stadium,Goblin Hut,https://clashroyale.fandom.com/wiki/Goblin_Hut,4.0,Rare,Building,Goblin Stadium
+2,Bone Pit,Bomber,https://clashroyale.fandom.com/wiki/Bomber,2.0,Common,Troop,Bone Pit
+2,Bone Pit,Skeletons,https://clashroyale.fandom.com/wiki/Skeletons,1.0,Common,Troop,Bone Pit
+2,Bone Pit,Tombstone,https://clashroyale.fandom.com/wiki/Tombstone,3.0,Rare,Building,Bone Pit
+2,Bone Pit,Valkyrie,https://clashroyale.fandom.com/wiki/Valkyrie,4.0,Rare,Troop,Bone Pit
+2,Bone Pit,Skeletons,https://clashroyale.fandom.com/wiki/Skeletons,1.0,Common,Troop,Bone Pit
+2,Bone Pit,Bomber,https://clashroyale.fandom.com/wiki/Bomber,2.0,Common,Troop,Bone Pit
+2,Bone Pit,Tombstone,https://clashroyale.fandom.com/wiki/Tombstone,3.0,Rare,Building,Bone Pit
+2,Bone Pit,Valkyrie,https://clashroyale.fandom.com/wiki/Valkyrie,4.0,Rare,Troop,Bone Pit
+3,Barbarian Bowl,Cannon,https://clashroyale.fandom.com/wiki/Cannon,3.0,Common,Building,Barbarian Bowl
+3,Barbarian Bowl,Barbarians,https://clashroyale.fandom.com/wiki/Barbarians,5.0,Common,Troop,Barbarian Bowl
+3,Barbarian Bowl,Mega Minion,https://clashroyale.fandom.com/wiki/Mega_Minion,3.0,Rare,Troop,Barbarian Bowl
+3,Barbarian Bowl,Battle Ram,https://clashroyale.fandom.com/wiki/Battle_Ram,4.0,Rare,Troop,Barbarian Bowl
+3,Barbarian Bowl,Barbarians,https://clashroyale.fandom.com/wiki/Barbarians,5.0,Common,Troop,Barbarian Bowl
+3,Barbarian Bowl,Cannon,https://clashroyale.fandom.com/wiki/Cannon,3.0,Common,Building,Barbarian Bowl
+3,Barbarian Bowl,Battle Ram,https://clashroyale.fandom.com/wiki/Battle_Ram,4.0,Rare,Troop,Barbarian Bowl
+3,Barbarian Bowl,Mega Minion,https://clashroyale.fandom.com/wiki/Mega_Minion,3.0,Rare,Troop,Barbarian Bowl
+4,Spell Valley,Electro Spirit,https://clashroyale.fandom.com/wiki/Electro_Spirit,1.0,Common,Troop,Spell Valley
+4,Spell Valley,Skeleton Dragons,https://clashroyale.fandom.com/wiki/Skeleton_Dragons,4.0,Common,Troop,Spell Valley
+4,Spell Valley,Fire Spirit,https://clashroyale.fandom.com/wiki/Fire_Spirit,1.0,Common,Troop,Spell Valley
+4,Spell Valley,Bomb Tower,https://clashroyale.fandom.com/wiki/Bomb_Tower,4.0,Rare,Building,Spell Valley
+4,Spell Valley,Inferno Tower,https://clashroyale.fandom.com/wiki/Inferno_Tower,5.0,Rare,Building,Spell Valley
+4,Spell Valley,Wizard,https://clashroyale.fandom.com/wiki/Wizard,5.0,Rare,Troop,Spell Valley
+4,Spell Valley,Inferno Tower,https://clashroyale.fandom.com/wiki/Inferno_Tower,5.0,Rare,Building,Spell Valley
+4,Spell Valley,Wizard,https://clashroyale.fandom.com/wiki/Wizard,5.0,Rare,Troop,Spell Valley
+4,Spell Valley,Fire Spirit,https://clashroyale.fandom.com/wiki/Fire_Spirit,1.0,Common,Troop,Spell Valley
+4,Spell Valley,Electro Spirit,https://clashroyale.fandom.com/wiki/Electro_Spirit,1.0,Common,Troop,Spell Valley
+5,Builder's Workshop,Zap,https://clashroyale.fandom.com/wiki/Zap,2.0,Common,Spell,Builder's Workshop
+5,Builder's Workshop,Mortar,https://clashroyale.fandom.com/wiki/Mortar,4.0,Common,Building,Builder's Workshop
+5,Builder's Workshop,Bats,https://clashroyale.fandom.com/wiki/Bats,2.0,Common,Troop,Builder's Workshop
+5,Builder's Workshop,Rocket,https://clashroyale.fandom.com/wiki/Rocket,6.0,Rare,Spell,Builder's Workshop
+5,Builder's Workshop,Flying Machine,https://clashroyale.fandom.com/wiki/Flying_Machine,4.0,Rare,Troop,Builder's Workshop
+5,Builder's Workshop,Hog Rider,https://clashroyale.fandom.com/wiki/Hog_Rider,4.0,Rare,Troop,Builder's Workshop
+5,Builder's Workshop,Zap,https://clashroyale.fandom.com/wiki/Zap,2.0,Common,Spell,Builder's Workshop
+5,Builder's Workshop,Bats,https://clashroyale.fandom.com/wiki/Bats,2.0,Common,Troop,Builder's Workshop
+5,Builder's Workshop,Hog Rider,https://clashroyale.fandom.com/wiki/Hog_Rider,4.0,Rare,Troop,Builder's Workshop
+5,Builder's Workshop,Flying Machine,https://clashroyale.fandom.com/wiki/Flying_Machine,4.0,Rare,Troop,Builder's Workshop
+6,P.E.K.K.A.'s Playhouse,Goblin Barrel,https://clashroyale.fandom.com/wiki/Goblin_Barrel,3.0,Epic,Spell,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Guards,https://clashroyale.fandom.com/wiki/Guards,3.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Baby Dragon,https://clashroyale.fandom.com/wiki/Baby_Dragon,4.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Skeleton Army,https://clashroyale.fandom.com/wiki/Skeleton_Army,3.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Witch,https://clashroyale.fandom.com/wiki/Witch,5.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,P.E.K.K.A.,https://clashroyale.fandom.com/wiki/P.E.K.K.A.,7.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Skeleton Army,https://clashroyale.fandom.com/wiki/Skeleton_Army,3.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Witch,https://clashroyale.fandom.com/wiki/Witch,5.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Goblin Barrel,https://clashroyale.fandom.com/wiki/Goblin_Barrel,3.0,Epic,Spell,P.E.K.K.A.'s Playhouse
+6,P.E.K.K.A.'s Playhouse,Guards,https://clashroyale.fandom.com/wiki/Guards,3.0,Epic,Troop,P.E.K.K.A.'s Playhouse
+7,Royal Arena,Royal Recruits,https://clashroyale.fandom.com/wiki/Royal_Recruits,7.0,Common,Troop,Royal Arena
+7,Royal Arena,Royal Giant,https://clashroyale.fandom.com/wiki/Royal_Giant,6.0,Common,Troop,Royal Arena
+7,Royal Arena,Royal Hogs,https://clashroyale.fandom.com/wiki/Royal_Hogs,5.0,Rare,Troop,Royal Arena
+7,Royal Arena,Three Musketeers,https://clashroyale.fandom.com/wiki/Three_Musketeers,9.0,Rare,Troop,Royal Arena
+7,Royal Arena,Dark Prince,https://clashroyale.fandom.com/wiki/Dark_Prince,4.0,Epic,Troop,Royal Arena
+7,Royal Arena,Prince,https://clashroyale.fandom.com/wiki/Prince,5.0,Epic,Troop,Royal Arena
+7,Royal Arena,Balloon,https://clashroyale.fandom.com/wiki/Balloon,5.0,Epic,Troop,Royal Arena
+7,Royal Arena,Royal Giant,https://clashroyale.fandom.com/wiki/Royal_Giant,6.0,Common,Troop,Royal Arena
+7,Royal Arena,Royal Recruits,https://clashroyale.fandom.com/wiki/Royal_Recruits,7.0,Common,Troop,Royal Arena
+7,Royal Arena,Three Musketeers,https://clashroyale.fandom.com/wiki/Three_Musketeers,9.0,Rare,Troop,Royal Arena
+7,Royal Arena,Royal Hogs,https://clashroyale.fandom.com/wiki/Royal_Hogs,5.0,Rare,Troop,Royal Arena
+8,Frozen Peak,Giant Snowball,https://clashroyale.fandom.com/wiki/Giant_Snowball,2.0,Common,Spell,Frozen Peak
+8,Frozen Peak,Ice Spirit,https://clashroyale.fandom.com/wiki/Ice_Spirit,1.0,Common,Troop,Frozen Peak
+8,Frozen Peak,Battle Healer,https://clashroyale.fandom.com/wiki/Battle_Healer,4.0,Rare,Troop,Frozen Peak
+8,Frozen Peak,Ice Golem,https://clashroyale.fandom.com/wiki/Ice_Golem,2.0,Rare,Troop,Frozen Peak
+8,Frozen Peak,Vines,https://clashroyale.fandom.com/wiki/Vines,3.0,Epic,Spell,Frozen Peak
+8,Frozen Peak,Lightning,https://clashroyale.fandom.com/wiki/Lightning,6.0,Epic,Spell,Frozen Peak
+8,Frozen Peak,Freeze,https://clashroyale.fandom.com/wiki/Freeze,4.0,Epic,Spell,Frozen Peak
+8,Frozen Peak,Giant Skeleton,https://clashroyale.fandom.com/wiki/Giant_Skeleton,6.0,Epic,Troop,Frozen Peak
+8,Frozen Peak,Cannoneer,https://clashroyale.fandom.com/wiki/Cannoneer,,Epic,Tower Troop,Frozen Peak
+8,Frozen Peak,Ice Spirit,https://clashroyale.fandom.com/wiki/Ice_Spirit,1.0,Common,Troop,Frozen Peak
+8,Frozen Peak,Giant Snowball,https://clashroyale.fandom.com/wiki/Giant_Snowball,2.0,Common,Spell,Frozen Peak
+8,Frozen Peak,Freeze,https://clashroyale.fandom.com/wiki/Freeze,4.0,Epic,Spell,Frozen Peak
+8,Frozen Peak,Lightning,https://clashroyale.fandom.com/wiki/Lightning,6.0,Epic,Spell,Frozen Peak
+9,Jungle Arena,Berserker,https://clashroyale.fandom.com/wiki/Berserker,2.0,Common,Troop,Jungle Arena
+9,Jungle Arena,Skeleton Barrel,https://clashroyale.fandom.com/wiki/Skeleton_Barrel,3.0,Common,Troop,Jungle Arena
+9,Jungle Arena,Goblin Gang,https://clashroyale.fandom.com/wiki/Goblin_Gang,3.0,Common,Troop,Jungle Arena
+9,Jungle Arena,Barbarian Hut,https://clashroyale.fandom.com/wiki/Barbarian_Hut,6.0,Rare,Building,Jungle Arena
+9,Jungle Arena,Dart Goblin,https://clashroyale.fandom.com/wiki/Dart_Goblin,3.0,Rare,Troop,Jungle Arena
+9,Jungle Arena,Barbarian Barrel,https://clashroyale.fandom.com/wiki/Barbarian_Barrel,2.0,Epic,Spell,Jungle Arena
+9,Jungle Arena,Poison,https://clashroyale.fandom.com/wiki/Poison,4.0,Epic,Spell,Jungle Arena
+9,Jungle Arena,Rune Giant,https://clashroyale.fandom.com/wiki/Rune_Giant,4.0,Epic,Troop,Jungle Arena
+9,Jungle Arena,Goblin Giant,https://clashroyale.fandom.com/wiki/Goblin_Giant,6.0,Epic,Troop,Jungle Arena
+9,Jungle Arena,Dart Goblin,https://clashroyale.fandom.com/wiki/Dart_Goblin,3.0,Rare,Troop,Jungle Arena
+9,Jungle Arena,Barbarian Hut,https://clashroyale.fandom.com/wiki/Barbarian_Hut,6.0,Rare,Building,Jungle Arena
+9,Jungle Arena,Goblin Giant,https://clashroyale.fandom.com/wiki/Goblin_Giant,6.0,Epic,Troop,Jungle Arena
+9,Jungle Arena,Poison,https://clashroyale.fandom.com/wiki/Poison,4.0,Epic,Spell,Jungle Arena
+10,Hog Mountain,Tesla,https://clashroyale.fandom.com/wiki/Tesla,4.0,Common,Building,Hog Mountain
+10,Hog Mountain,Elite Barbarians,https://clashroyale.fandom.com/wiki/Elite_Barbarians,6.0,Common,Troop,Hog Mountain
+10,Hog Mountain,Minion Horde,https://clashroyale.fandom.com/wiki/Minion_Horde,5.0,Common,Troop,Hog Mountain
+10,Hog Mountain,Furnace,https://clashroyale.fandom.com/wiki/Furnace,4.0,Rare,Troop,Hog Mountain
+10,Hog Mountain,Zappies,https://clashroyale.fandom.com/wiki/Zappies,4.0,Rare,Troop,Hog Mountain
+10,Hog Mountain,X-Bow,https://clashroyale.fandom.com/wiki/X-Bow,6.0,Epic,Building,Hog Mountain
+10,Hog Mountain,Hunter,https://clashroyale.fandom.com/wiki/Hunter,4.0,Epic,Troop,Hog Mountain
+10,Hog Mountain,Golem,https://clashroyale.fandom.com/wiki/Golem,8.0,Epic,Troop,Hog Mountain
+10,Hog Mountain,Elite Barbarians,https://clashroyale.fandom.com/wiki/Elite_Barbarians,6.0,Common,Troop,Hog Mountain
+10,Hog Mountain,Minion Horde,https://clashroyale.fandom.com/wiki/Minion_Horde,5.0,Common,Troop,Hog Mountain
+10,Hog Mountain,Golem,https://clashroyale.fandom.com/wiki/Golem,8.0,Epic,Troop,Hog Mountain
+10,Hog Mountain,Hunter,https://clashroyale.fandom.com/wiki/Hunter,4.0,Epic,Troop,Hog Mountain
+11,Electro Valley,The Log,https://clashroyale.fandom.com/wiki/The_Log,2.0,Legendary,Spell,Electro Valley
+11,Electro Valley,Mega Knight,https://clashroyale.fandom.com/wiki/Mega_Knight,7.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Ram Rider,https://clashroyale.fandom.com/wiki/Ram_Rider,5.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Electro Wizard,https://clashroyale.fandom.com/wiki/Electro_Wizard,4.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Inferno Dragon,https://clashroyale.fandom.com/wiki/Inferno_Dragon,4.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Sparky,https://clashroyale.fandom.com/wiki/Sparky,6.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Miner,https://clashroyale.fandom.com/wiki/Miner,3.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Princess,https://clashroyale.fandom.com/wiki/Princess,3.0,Legendary,Troop,Electro Valley
+11,Electro Valley,Dagger Duchess,https://clashroyale.fandom.com/wiki/Dagger_Duchess,,Legendary,Tower Troop,Electro Valley
+12,Spooky Town,Firecracker,https://clashroyale.fandom.com/wiki/Firecracker,3.0,Common,Troop,Spooky Town
+12,Spooky Town,Earthquake,https://clashroyale.fandom.com/wiki/Earthquake,3.0,Rare,Spell,Spooky Town
+12,Spooky Town,Goblin Demolisher,https://clashroyale.fandom.com/wiki/Goblin_Demolisher,4.0,Rare,Troop,Spooky Town
+12,Spooky Town,Electro Dragon,https://clashroyale.fandom.com/wiki/Electro_Dragon,5.0,Epic,Troop,Spooky Town
+12,Spooky Town,Wall Breakers,https://clashroyale.fandom.com/wiki/Wall_Breakers,2.0,Epic,Troop,Spooky Town
+12,Spooky Town,Graveyard,https://clashroyale.fandom.com/wiki/Graveyard,5.0,Legendary,Spell,Spooky Town
+12,Spooky Town,Phoenix,https://clashroyale.fandom.com/wiki/Phoenix,4.0,Legendary,Troop,Spooky Town
+12,Spooky Town,Royal Ghost,https://clashroyale.fandom.com/wiki/Royal_Ghost,3.0,Legendary,Troop,Spooky Town
+12,Spooky Town,Ice Wizard,https://clashroyale.fandom.com/wiki/Ice_Wizard,3.0,Legendary,Troop,Spooky Town
+12,Spooky Town,Wall Breakers,https://clashroyale.fandom.com/wiki/Wall_Breakers,2.0,Epic,Troop,Spooky Town
+12,Spooky Town,Electro Dragon,https://clashroyale.fandom.com/wiki/Electro_Dragon,5.0,Epic,Troop,Spooky Town
+12,Spooky Town,Firecracker,https://clashroyale.fandom.com/wiki/Firecracker,3.0,Common,Troop,Spooky Town
+12,Spooky Town,Rascals,https://clashroyale.fandom.com/wiki/Rascals,5.0,Common,Troop,Rascal's Hideout
+13,Rascal's Hideout,Rascals,https://clashroyale.fandom.com/wiki/Rascals,5.0,Common,Troop,Rascal's Hideout
+13,Rascal's Hideout,Heal Spirit,https://clashroyale.fandom.com/wiki/Heal_Spirit,1.0,Rare,Troop,Rascal's Hideout
+13,Rascal's Hideout,Suspicious Bush,https://clashroyale.fandom.com/wiki/Suspicious_Bush,2.0,Rare,Troop,Rascal's Hideout
+13,Rascal's Hideout,Electro Giant,https://clashroyale.fandom.com/wiki/Electro_Giant,7.0,Epic,Troop,Rascal's Hideout
+13,Rascal's Hideout,Bowler,https://clashroyale.fandom.com/wiki/Bowler,5.0,Epic,Troop,Rascal's Hideout
+13,Rascal's Hideout,Magic Archer,https://clashroyale.fandom.com/wiki/Magic_Archer,4.0,Legendary,Troop,Rascal's Hideout
+13,Rascal's Hideout,Bandit,https://clashroyale.fandom.com/wiki/Bandit,3.0,Legendary,Troop,Rascal's Hideout
+13,Rascal's Hideout,Lava Hound,https://clashroyale.fandom.com/wiki/Lava_Hound,7.0,Legendary,Troop,Rascal's Hideout
+13,Rascal's Hideout,Royal Chef,https://clashroyale.fandom.com/wiki/Royal_Chef,,Legendary,Tower Troop,Rascal's Hideout
+13,Rascal's Hideout,Bowler,https://clashroyale.fandom.com/wiki/Bowler,5.0,Epic,Troop,Rascal's Hideout
+13,Rascal's Hideout,Electro Giant,https://clashroyale.fandom.com/wiki/Electro_Giant,7.0,Epic,Troop,Rascal's Hideout
+14,Serenity Peak,Royal Delivery,https://clashroyale.fandom.com/wiki/Royal_Delivery,3.0,Common,Spell,Serenity Peak
+14,Serenity Peak,Elixir Golem,https://clashroyale.fandom.com/wiki/Elixir_Golem,3.0,Rare,Troop,Serenity Peak
+14,Serenity Peak,Goblin Curse,https://clashroyale.fandom.com/wiki/Goblin_Curse,2.0,Epic,Spell,Serenity Peak
+14,Serenity Peak,Rage,https://clashroyale.fandom.com/wiki/Rage,2.0,Epic,Spell,Serenity Peak
+14,Serenity Peak,Goblin Drill,https://clashroyale.fandom.com/wiki/Goblin_Drill,4.0,Epic,Building,Serenity Peak
+14,Serenity Peak,Executioner,https://clashroyale.fandom.com/wiki/Executioner,5.0,Epic,Troop,Serenity Peak
+14,Serenity Peak,Night Witch,https://clashroyale.fandom.com/wiki/Night_Witch,4.0,Legendary,Troop,Serenity Peak
+14,Serenity Peak,Lumberjack,https://clashroyale.fandom.com/wiki/Lumberjack,4.0,Legendary,Troop,Serenity Peak
+14,Serenity Peak,Goblin Drill,https://clashroyale.fandom.com/wiki/Goblin_Drill,4.0,Epic,Building,Serenity Peak
+14,Serenity Peak,Executioner,https://clashroyale.fandom.com/wiki/Executioner,5.0,Epic,Troop,Serenity Peak
+14,Serenity Peak,Goblin Curse,https://clashroyale.fandom.com/wiki/Goblin_Curse,2.0,Epic,Spell,Serenity Peak
+14,Serenity Peak,Rage,https://clashroyale.fandom.com/wiki/Rage,2.0,Epic,Spell,Serenity Peak
+14,Serenity Peak,Royal Delivery,https://clashroyale.fandom.com/wiki/Royal_Delivery,3.0,Common,Spell,Serenity Peak
+14,Serenity Peak,Night Witch,https://clashroyale.fandom.com/wiki/Night_Witch,4.0,Legendary,Troop,Serenity Peak
+14,Serenity Peak,Mother Witch,https://clashroyale.fandom.com/wiki/Mother_Witch,4.0,Legendary,Troop,Miner's Mine
+14,Serenity Peak,Elixir Golem,https://clashroyale.fandom.com/wiki/Elixir_Golem,3.0,Rare,Troop,Serenity Peak
+14,Serenity Peak,Elixir Collector,https://clashroyale.fandom.com/wiki/Elixir_Collector,6.0,Rare,Building,Miner's Mine
+15,Miner's Mine,Elixir Collector,https://clashroyale.fandom.com/wiki/Elixir_Collector,6.0,Rare,Building,Miner's Mine
+15,Miner's Mine,Void,https://clashroyale.fandom.com/wiki/Void,3.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Clone,https://clashroyale.fandom.com/wiki/Clone,3.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Tornado,https://clashroyale.fandom.com/wiki/Tornado,3.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Mirror,https://clashroyale.fandom.com/wiki/Mirror,1.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Cannon Cart,https://clashroyale.fandom.com/wiki/Cannon_Cart,5.0,Epic,Troop,Miner's Mine
+15,Miner's Mine,Spirit Empress,https://clashroyale.fandom.com/wiki/Spirit_Empress,663.0,Legendary,Troop,Miner's Mine
+15,Miner's Mine,Goblin Machine,https://clashroyale.fandom.com/wiki/Goblin_Machine,5.0,Legendary,Troop,Miner's Mine
+15,Miner's Mine,Mother Witch,https://clashroyale.fandom.com/wiki/Mother_Witch,4.0,Legendary,Troop,Miner's Mine
+15,Miner's Mine,Fisherman,https://clashroyale.fandom.com/wiki/Fisherman,3.0,Legendary,Troop,Miner's Mine
+15,Miner's Mine,Clone,https://clashroyale.fandom.com/wiki/Clone,3.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Mirror,https://clashroyale.fandom.com/wiki/Mirror,1.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Tornado,https://clashroyale.fandom.com/wiki/Tornado,3.0,Epic,Spell,Miner's Mine
+15,Miner's Mine,Void,https://clashroyale.fandom.com/wiki/Void,3.0,Epic,Spell,Miner's Mine
+16,Executioner's Kitchen,Golden Knight,https://clashroyale.fandom.com/wiki/Golden_Knight,4.0,Champion,Troop,Executioner's Kitchen
+16,Executioner's Kitchen,Skeleton King,https://clashroyale.fandom.com/wiki/Skeleton_King,4.0,Champion,Troop,Executioner's Kitchen
+17,Royal Crypt,Boss Bandit,https://clashroyale.fandom.com/wiki/Boss_Bandit,6.0,Champion,Troop,Royal Crypt
+17,Royal Crypt,Archer Queen,https://clashroyale.fandom.com/wiki/Archer_Queen,5.0,Champion,Troop,Royal Crypt
+17,Royal Crypt,Mighty Miner,https://clashroyale.fandom.com/wiki/Mighty_Miner,4.0,Champion,Troop,Royal Crypt
+18,Silent Sanctuary,Goblinstein,https://clashroyale.fandom.com/wiki/Goblinstein,5.0,Champion,Troop,Silent Sanctuary
+18,Silent Sanctuary,Little Prince,https://clashroyale.fandom.com/wiki/Little_Prince,3.0,Champion,Troop,Silent Sanctuary
+18,Silent Sanctuary,Monk,https://clashroyale.fandom.com/wiki/Monk,5.0,Champion,Troop,Silent Sanctuary

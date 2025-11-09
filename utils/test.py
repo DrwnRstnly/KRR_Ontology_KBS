@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Clash Royale Fandom scraper: Arenas -> Cards -> Card details.
 
