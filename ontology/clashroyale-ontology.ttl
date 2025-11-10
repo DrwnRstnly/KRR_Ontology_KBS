@@ -227,98 +227,2208 @@
 # Example cards
 #################################################################
 
-:HogRider a :Troop ;
-  rdfs:label "Hog Rider" ;
-  :hasRarity :Rare ;
-  :inArena :GoblinStadium ;
-  :hasTargetType :BuildingsOnly ;
-  :hasDamageType :Melee ;
-  :hasRangeType :MeleeRange ;
-  :hasSpeedClass :Fast ;
-  :elixirCost 4 ;
-  :hitpoints 1400 ;
-  :damage 264 ;
-  :attackSpeed 1.6 .
+:arrows a :Spell ;
+  rdfs:label "Arrows" ;
+  :hasRarity :Common ;
+  :inArena :Training_camp ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :damage 483144 ;
+  :hasSplash true .
 
-:Fireball a :Spell ;
+:minions a :Troop ;
+  rdfs:label "Minions" ;
+  :hasRarity :Common ;
+  :inArena :Training_camp ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 90 ;
+  :damage 46 ;
+  :range 2.5 ;
+  :count 3 ;
+  :hasSplash false .
+
+:archers a :Troop ;
+  rdfs:label "Archers" ;
+  :hasRarity :Common ;
+  :inArena :Training_camp ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 119 ;
+  :damage 39 ;
+  :range 5 ;
+  :count 2 ;
+  :hasSplash false .
+
+:knight a :Troop ;
+  rdfs:label "Knight" ;
+  :hasRarity :Common ;
+  :inArena :Training_camp ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 690 ;
+  :damage 79 ;
+  :count 1 ;
+  :hasSplash false .
+
+:fireball a :Spell ;
   rdfs:label "Fireball" ;
   :hasRarity :Rare ;
-  :inArena :GoblinStadium ;
+  :inArena :Training_camp ;
+  :hasTargetType :GroundAndAir ;
   :hasDamageType :SpellDamage ;
-  :hasRangeType :LongRange ;
   :elixirCost 4 ;
-  :radius 2.5 .
+  :damage 325 ;
+  :hasSplash true .
 
-:Cannon a :Building ;
-  rdfs:label "Cannon" ;
-  :hasRarity :Common ;
-  :inArena :GoblinStadium ;
+:mini_p_e_k_k_a a :Troop ;
+  rdfs:label "Mini P.E.K.K.A." ;
+  :hasRarity :Rare ;
+  :inArena :Training_camp ;
   :hasTargetType :Ground ;
-  :hasDamageType :Ranged ;
-  :hasRangeType :MediumRange ;
-  :elixirCost 3 ;
-  :lifetime 30.0 ;
-  :damage 100 ;
-  :hitpoints 900 .
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 677 ;
+  :damage 355 ;
+  :count 1 ;
+  :hasSplash false .
 
-:Musketeer a :Troop ;
+:musketeer a :Troop ;
   rdfs:label "Musketeer" ;
   :hasRarity :Rare ;
-  :inArena :GoblinStadium ;
+  :inArena :Training_camp ;
   :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
   :hasDamageType :Ranged ;
-  :hasRangeType :LongRange ;
-  :hasSpeedClass :Medium ;
   :elixirCost 4 ;
-  :hitpoints 598 ;
-  :damage 218 ;
-  :attackSpeed 1.1 .
+  :hitpoints 341 ;
+  :damage 102 ;
+  :range 6 ;
+  :count 1 ;
+  :hasSplash false .
 
-:IceGolem a :Troop ;
-  rdfs:label "Ice Golem" ;
+:giant a :Troop ;
+  rdfs:label "Giant" ;
   :hasRarity :Rare ;
-  :inArena :GoblinStadium ;
+  :inArena :Training_camp ;
   :hasTargetType :BuildingsOnly ;
-  :hasDamageType :Melee ;
   :hasRangeType :MeleeRange ;
-  :hasSpeedClass :Slow ;
-  :elixirCost 2 ;
-  :hitpoints 900 ;
-  :damage 27 .
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 1933 ;
+  :damage 119 ;
+  :count 1 ;
+  :hasSplash false .
 
-:Skeletons a :Troop ;
+:tower_princess a :Troop ;
+  rdfs:label "Tower Princess" ;
+  :hasRarity :Common ;
+  :inArena :Training_camp ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :hitpoints 1400 ;
+  :damage 50 ;
+  :range 7.5 ;
+  :hasSplash false .
+
+:spear_goblins a :Troop ;
+  rdfs:label "Spear Goblins" ;
+  :hasRarity :Common ;
+  :inArena :Goblin_stadium ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 2 ;
+  :hitpoints 52 ;
+  :damage 32 ;
+  :range 5 ;
+  :count 3 ;
+  :hasSplash false .
+
+:goblins a :Troop ;
+  rdfs:label "Goblins" ;
+  :hasRarity :Common ;
+  :inArena :Goblin_stadium ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 79 ;
+  :damage 47 ;
+  :count 4 ;
+  :hasSplash false .
+
+:goblin_cage a :Building ;
+  rdfs:label "Goblin Cage" ;
+  :hasRarity :Rare ;
+  :inArena :Goblin_stadium ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:goblin_hut a :Building ;
+  rdfs:label "Goblin Hut" ;
+  :hasRarity :Rare ;
+  :inArena :Goblin_stadium ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:goblins a :Troop ;
+  rdfs:label "Goblins" ;
+  :hasRarity :Common ;
+  :inArena :Goblin_stadium ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 79 ;
+  :damage 47 ;
+  :count 4 ;
+  :hasSplash false .
+
+:spear_goblins a :Troop ;
+  rdfs:label "Spear Goblins" ;
+  :hasRarity :Common ;
+  :inArena :Goblin_stadium ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 2 ;
+  :hitpoints 52 ;
+  :damage 32 ;
+  :range 5 ;
+  :count 3 ;
+  :hasSplash false .
+
+:goblin_cage a :Building ;
+  rdfs:label "Goblin Cage" ;
+  :hasRarity :Rare ;
+  :inArena :Goblin_stadium ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:goblin_hut a :Building ;
+  rdfs:label "Goblin Hut" ;
+  :hasRarity :Rare ;
+  :inArena :Goblin_stadium ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:bomber a :Troop ;
+  rdfs:label "Bomber" ;
+  :hasRarity :Common ;
+  :inArena :Bone_pit ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 2 ;
+  :hitpoints 119 ;
+  :damage 88 ;
+  :range 4.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:skeletons a :Troop ;
   rdfs:label "Skeletons" ;
   :hasRarity :Common ;
-  :inArena :TrainingCamp ;
+  :inArena :Bone_pit ;
   :hasTargetType :Ground ;
-  :hasDamageType :Melee ;
   :hasRangeType :MeleeRange ;
-  :hasSpeedClass :Fast ;
+  :hasDamageType :Melee ;
   :elixirCost 1 ;
-  :hitpoints 67 ;
-  :damage 67 ;
-  :attackSpeed 1.0 .
+  :hitpoints 32 ;
+  :damage 32 ;
+  :count 3 ;
+  :hasSplash false .
 
-:IceSpirit a :Troop ;
+:tombstone a :Building ;
+  rdfs:label "Tombstone" ;
+  :hasRarity :Rare ;
+  :inArena :Bone_pit ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hasSplash false .
+
+:valkyrie a :Troop ;
+  rdfs:label "Valkyrie" ;
+  :hasRarity :Rare ;
+  :inArena :Bone_pit ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 901 ;
+  :damage 125 ;
+  :count 1 ;
+  :hasSplash true .
+
+:skeletons a :Troop ;
+  rdfs:label "Skeletons" ;
+  :hasRarity :Common ;
+  :inArena :Bone_pit ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 1 ;
+  :hitpoints 32 ;
+  :damage 32 ;
+  :count 3 ;
+  :hasSplash false .
+
+:bomber a :Troop ;
+  rdfs:label "Bomber" ;
+  :hasRarity :Common ;
+  :inArena :Bone_pit ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 2 ;
+  :hitpoints 119 ;
+  :damage 88 ;
+  :range 4.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:tombstone a :Building ;
+  rdfs:label "Tombstone" ;
+  :hasRarity :Rare ;
+  :inArena :Bone_pit ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hasSplash false .
+
+:valkyrie a :Troop ;
+  rdfs:label "Valkyrie" ;
+  :hasRarity :Rare ;
+  :inArena :Bone_pit ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 901 ;
+  :damage 125 ;
+  :count 1 ;
+  :hasSplash true .
+
+:cannon a :Building ;
+  rdfs:label "Cannon" ;
+  :hasRarity :Common ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 322 ;
+  :damage 83 ;
+  :range 5.5 ;
+  :hasSplash false .
+
+:barbarians a :Troop ;
+  rdfs:label "Barbarians" ;
+  :hasRarity :Common ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 262 ;
+  :damage 75 ;
+  :count 5 ;
+  :hasSplash false .
+
+:mega_minion a :Troop ;
+  rdfs:label "Mega Minion" ;
+  :hasRarity :Rare ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 395 ;
+  :damage 147 ;
+  :count 1 ;
+  :hasSplash false .
+
+:battle_ram a :Troop ;
+  rdfs:label "Battle Ram" ;
+  :hasRarity :Rare ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:barbarians a :Troop ;
+  rdfs:label "Barbarians" ;
+  :hasRarity :Common ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 262 ;
+  :damage 75 ;
+  :count 5 ;
+  :hasSplash false .
+
+:cannon a :Building ;
+  rdfs:label "Cannon" ;
+  :hasRarity :Common ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 322 ;
+  :damage 83 ;
+  :range 5.5 ;
+  :hasSplash false .
+
+:battle_ram a :Troop ;
+  rdfs:label "Battle Ram" ;
+  :hasRarity :Rare ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:mega_minion a :Troop ;
+  rdfs:label "Mega Minion" ;
+  :hasRarity :Rare ;
+  :inArena :Barbarian_bowl ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 395 ;
+  :damage 147 ;
+  :count 1 ;
+  :hasSplash false .
+
+:electro_spirit a :Troop ;
+  rdfs:label "Electro Spirit" ;
+  :hasRarity :Common ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 1 ;
+  :hitpoints 90 ;
+  :damage 399 ;
+  :range 2.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:skeleton_dragons a :Troop ;
+  rdfs:label "Skeleton Dragons" ;
+  :hasRarity :Common ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 219 ;
+  :damage 63 ;
+  :range 3.5 ;
+  :count 2 ;
+  :hasSplash true .
+
+:fire_spirit a :Troop ;
+  rdfs:label "Fire Spirit" ;
+  :hasRarity :Common ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 1 ;
+  :hitpoints 90 ;
+  :damage 81 ;
+  :range 2.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:bomb_tower a :Building ;
+  rdfs:label "Bomb Tower" ;
+  :hasRarity :Rare ;
+  :inArena :Spell_valley ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 640 ;
+  :damage 105 ;
+  :range 6 ;
+  :hasSplash true .
+
+:inferno_tower a :Building ;
+  rdfs:label "Inferno Tower" ;
+  :hasRarity :Rare ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 826 ;
+  :range 6 ;
+  :hasSplash false .
+
+:wizard a :Troop ;
+  rdfs:label "Wizard" ;
+  :hasRarity :Rare ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 356 ;
+  :damage 133 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:inferno_tower a :Building ;
+  rdfs:label "Inferno Tower" ;
+  :hasRarity :Rare ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 826 ;
+  :range 6 ;
+  :hasSplash false .
+
+:wizard a :Troop ;
+  rdfs:label "Wizard" ;
+  :hasRarity :Rare ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 356 ;
+  :damage 133 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:fire_spirit a :Troop ;
+  rdfs:label "Fire Spirit" ;
+  :hasRarity :Common ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 1 ;
+  :hitpoints 90 ;
+  :damage 81 ;
+  :range 2.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:electro_spirit a :Troop ;
+  rdfs:label "Electro Spirit" ;
+  :hasRarity :Common ;
+  :inArena :Spell_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 1 ;
+  :hitpoints 90 ;
+  :damage 399 ;
+  :range 2.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:zap a :Spell ;
+  rdfs:label "Zap" ;
+  :hasRarity :Common ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 75 ;
+  :hasSplash true .
+
+:mortar a :Building ;
+  rdfs:label "Mortar" ;
+  :hasRarity :Common ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 535 ;
+  :damage 104 ;
+  :range 3.5 ;
+  :hasSplash true .
+
+:bats a :Troop ;
+  rdfs:label "Bats" ;
+  :hasRarity :Common ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 32 ;
+  :damage 32 ;
+  :count 5 ;
+  :hasSplash false .
+
+:rocket a :Spell ;
+  rdfs:label "Rocket" ;
+  :hasRarity :Rare ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 6 ;
+  :damage 701 ;
+  :hasSplash true .
+
+:flying_machine a :Troop ;
+  rdfs:label "Flying Machine" ;
+  :hasRarity :Rare ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 290 ;
+  :damage 81 ;
+  :range 6 ;
+  :count 1 ;
+  :hasSplash false .
+
+:hog_rider a :Troop ;
+  rdfs:label "Hog Rider" ;
+  :hasRarity :Rare ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 802 ;
+  :damage 150 ;
+  :count 1 ;
+  :hasSplash false .
+
+:zap a :Spell ;
+  rdfs:label "Zap" ;
+  :hasRarity :Common ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 75 ;
+  :hasSplash true .
+
+:bats a :Troop ;
+  rdfs:label "Bats" ;
+  :hasRarity :Common ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 32 ;
+  :damage 32 ;
+  :count 5 ;
+  :hasSplash false .
+
+:hog_rider a :Troop ;
+  rdfs:label "Hog Rider" ;
+  :hasRarity :Rare ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 802 ;
+  :damage 150 ;
+  :count 1 ;
+  :hasSplash false .
+
+:flying_machine a :Troop ;
+  rdfs:label "Flying Machine" ;
+  :hasRarity :Rare ;
+  :inArena :Builder_s_workshop ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 290 ;
+  :damage 81 ;
+  :range 6 ;
+  :count 1 ;
+  :hasSplash false .
+
+:goblin_barrel a :Spell ;
+  rdfs:label "Goblin Barrel" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:guards a :Troop ;
+  rdfs:label "Guards" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 51 ;
+  :damage 73 ;
+  :count 3 ;
+  :hasSplash false .
+
+:baby_dragon a :Troop ;
+  rdfs:label "Baby Dragon" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 720 ;
+  :damage 100 ;
+  :range 3.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:skeleton_army a :Troop ;
+  rdfs:label "Skeleton Army" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 51 ;
+  :damage 51 ;
+  :count 15 ;
+  :hasSplash false .
+
+:witch a :Troop ;
+  rdfs:label "Witch" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 524 ;
+  :damage 84 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:p_e_k_k_a a :Troop ;
+  rdfs:label "P.E.K.K.A." ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 7 ;
+  :hitpoints 2350 ;
+  :damage 510 ;
+  :count 1 ;
+  :hasSplash false .
+
+:skeleton_army a :Troop ;
+  rdfs:label "Skeleton Army" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 51 ;
+  :damage 51 ;
+  :count 15 ;
+  :hasSplash false .
+
+:witch a :Troop ;
+  rdfs:label "Witch" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 524 ;
+  :damage 84 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:goblin_barrel a :Spell ;
+  rdfs:label "Goblin Barrel" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:guards a :Troop ;
+  rdfs:label "Guards" ;
+  :hasRarity :Epic ;
+  :inArena :P_e_k_k_a_s_playhouse ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 51 ;
+  :damage 73 ;
+  :count 3 ;
+  :hasSplash false .
+
+:royal_recruits a :Troop ;
+  rdfs:label "Royal Recruits" ;
+  :hasRarity :Common ;
+  :inArena :Royal_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 7 ;
+  :hitpoints 214 ;
+  :damage 52 ;
+  :count 6 ;
+  :hasSplash false .
+
+:royal_giant a :Troop ;
+  rdfs:label "Royal Giant" ;
+  :hasRarity :Common ;
+  :inArena :Royal_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 6 ;
+  :hitpoints 1236 ;
+  :damage 120 ;
+  :range 5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:royal_hogs a :Troop ;
+  rdfs:label "Royal Hogs" ;
+  :hasRarity :Rare ;
+  :inArena :Royal_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 395 ;
+  :damage 35 ;
+  :count 4 ;
+  :hasSplash false .
+
+:three_musketeers a :Troop ;
+  rdfs:label "Three Musketeers" ;
+  :hasRarity :Rare ;
+  :inArena :Royal_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 9 ;
+  :hitpoints 341 ;
+  :damage 102 ;
+  :range 6 ;
+  :count 3 ;
+  :hasSplash false .
+
+:dark_prince a :Troop ;
+  rdfs:label "Dark Prince" ;
+  :hasRarity :Epic ;
+  :inArena :Royal_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 750 ;
+  :damage 166 ;
+  :count 1 ;
+  :hasSplash true .
+
+:prince a :Troop ;
+  rdfs:label "Prince" ;
+  :hasRarity :Epic ;
+  :inArena :Royal_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 1200 ;
+  :damage 244 ;
+  :count 1 ;
+  :hasSplash false .
+
+:balloon a :Troop ;
+  rdfs:label "Balloon" ;
+  :hasRarity :Epic ;
+  :inArena :Royal_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 1049 ;
+  :damage 400 ;
+  :count 1 ;
+  :hasSplash false .
+
+:royal_giant a :Troop ;
+  rdfs:label "Royal Giant" ;
+  :hasRarity :Common ;
+  :inArena :Royal_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 6 ;
+  :hitpoints 1236 ;
+  :damage 120 ;
+  :range 5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:royal_recruits a :Troop ;
+  rdfs:label "Royal Recruits" ;
+  :hasRarity :Common ;
+  :inArena :Royal_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 7 ;
+  :hitpoints 214 ;
+  :damage 52 ;
+  :count 6 ;
+  :hasSplash false .
+
+:three_musketeers a :Troop ;
+  rdfs:label "Three Musketeers" ;
+  :hasRarity :Rare ;
+  :inArena :Royal_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 9 ;
+  :hitpoints 341 ;
+  :damage 102 ;
+  :range 6 ;
+  :count 3 ;
+  :hasSplash false .
+
+:royal_hogs a :Troop ;
+  rdfs:label "Royal Hogs" ;
+  :hasRarity :Rare ;
+  :inArena :Royal_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 395 ;
+  :damage 35 ;
+  :count 4 ;
+  :hasSplash false .
+
+:giant_snowball a :Spell ;
+  rdfs:label "Giant Snowball" ;
+  :hasRarity :Common ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 70 ;
+  :hasSplash true .
+
+:ice_spirit a :Troop ;
   rdfs:label "Ice Spirit" ;
   :hasRarity :Common ;
-  :inArena :TrainingCamp ;
+  :inArena :Frozen_peak ;
   :hasTargetType :GroundAndAir ;
-  :hasDamageType :AreaDamage ;
   :hasRangeType :ShortRange ;
-  :hasSpeedClass :Fast ;
+  :hasDamageType :AreaDamage ;
   :elixirCost 1 ;
-  :hitpoints 190 ;
-  :damage 90 .
+  :hitpoints 90 ;
+  :damage 43 ;
+  :range 2.5 ;
+  :hasSplash true .
 
-:TheLog a :Spell ;
+:battle_healer a :Troop ;
+  rdfs:label "Battle Healer" ;
+  :hasRarity :Rare ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 811 ;
+  :damage 70 ;
+  :count 1 ;
+  :hasSplash false .
+
+:ice_golem a :Troop ;
+  rdfs:label "Ice Golem" ;
+  :hasRarity :Rare ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 566 ;
+  :damage 39 ;
+  :count 1 ;
+  :hasSplash false .
+
+:vines a :Spell ;
+  rdfs:label "Vines" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:lightning a :Spell ;
+  rdfs:label "Lightning" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 6 ;
+  :damage 660 ;
+  :count 3 ;
+  :hasSplash true .
+
+:freeze a :Spell ;
+  rdfs:label "Freeze" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 4 ;
+  :damage 72 ;
+  :hasSplash true .
+
+:giant_skeleton a :Troop ;
+  rdfs:label "Giant Skeleton" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 2260 ;
+  :damage 166 ;
+  :count 1 ;
+  :hasSplash false .
+
+:cannoneer a :Troop ;
+  rdfs:label "Cannoneer" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :hitpoints 1740 ;
+  :damage 189 ;
+  :range 7.5 ;
+  :hasSplash false .
+
+:ice_spirit a :Troop ;
+  rdfs:label "Ice Spirit" ;
+  :hasRarity :Common ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 1 ;
+  :hitpoints 90 ;
+  :damage 43 ;
+  :range 2.5 ;
+  :hasSplash true .
+
+:giant_snowball a :Spell ;
+  rdfs:label "Giant Snowball" ;
+  :hasRarity :Common ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 70 ;
+  :hasSplash true .
+
+:freeze a :Spell ;
+  rdfs:label "Freeze" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 4 ;
+  :damage 72 ;
+  :hasSplash true .
+
+:lightning a :Spell ;
+  rdfs:label "Lightning" ;
+  :hasRarity :Epic ;
+  :inArena :Frozen_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 6 ;
+  :damage 660 ;
+  :count 3 ;
+  :hasSplash true .
+
+:berserker a :Troop ;
+  rdfs:label "Berserker" ;
+  :hasRarity :Common ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :hitpoints 350 ;
+  :damage 40 ;
+  :count 1 ;
+  :hasSplash false .
+
+:skeleton_barrel a :Troop ;
+  rdfs:label "Skeleton Barrel" ;
+  :hasRarity :Common ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hasSplash false .
+
+:goblin_gang a :Troop ;
+  rdfs:label "Goblin Gang" ;
+  :hasRarity :Common ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :count 3 ;
+  :hasSplash false .
+
+:barbarian_hut a :Building ;
+  rdfs:label "Barbarian Hut" ;
+  :hasRarity :Rare ;
+  :inArena :Jungle_arena ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hasSplash false .
+
+:dart_goblin a :Troop ;
+  rdfs:label "Dart Goblin" ;
+  :hasRarity :Rare ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 123 ;
+  :damage 67 ;
+  :range 6.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:barbarian_barrel a :Spell ;
+  rdfs:label "Barbarian Barrel" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :range 4.5 ;
+  :hasSplash true .
+
+:poison a :Spell ;
+  rdfs:label "Poison" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 4 ;
+  :hasSplash true .
+
+:rune_giant a :Troop ;
+  rdfs:label "Rune Giant" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 1664 ;
+  :damage 75 ;
+  :count 1 ;
+  :hasSplash false .
+
+:goblin_giant a :Troop ;
+  rdfs:label "Goblin Giant" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :count 1 ;
+  :hasSplash false .
+
+:dart_goblin a :Troop ;
+  rdfs:label "Dart Goblin" ;
+  :hasRarity :Rare ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :hitpoints 123 ;
+  :damage 67 ;
+  :range 6.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:barbarian_hut a :Building ;
+  rdfs:label "Barbarian Hut" ;
+  :hasRarity :Rare ;
+  :inArena :Jungle_arena ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hasSplash false .
+
+:goblin_giant a :Troop ;
+  rdfs:label "Goblin Giant" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :count 1 ;
+  :hasSplash false .
+
+:poison a :Spell ;
+  rdfs:label "Poison" ;
+  :hasRarity :Epic ;
+  :inArena :Jungle_arena ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 4 ;
+  :hasSplash true .
+
+:tesla a :Building ;
+  rdfs:label "Tesla" ;
+  :hasRarity :Common ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 450 ;
+  :damage 86 ;
+  :range 5.5 ;
+  :hasSplash false .
+
+:elite_barbarians a :Troop ;
+  rdfs:label "Elite Barbarians" ;
+  :hasRarity :Common ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 524 ;
+  :damage 150 ;
+  :count 2 ;
+  :hasSplash false .
+
+:minion_horde a :Troop ;
+  rdfs:label "Minion Horde" ;
+  :hasRarity :Common ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 90 ;
+  :damage 46 ;
+  :range 2.5 ;
+  :count 6 ;
+  :hasSplash false .
+
+:furnace a :Troop ;
+  rdfs:label "Furnace" ;
+  :hasRarity :Rare ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :range 6 ;
+  :hasSplash true .
+
+:zappies a :Troop ;
+  rdfs:label "Zappies" ;
+  :hasRarity :Rare ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 250 ;
+  :damage 55 ;
+  :range 4.5 ;
+  :count 3 ;
+  :hasSplash false .
+
+:x_bow a :Building ;
+  rdfs:label "X-Bow" ;
+  :hasRarity :Epic ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :Ground ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 6 ;
+  :hitpoints 1000 ;
+  :damage 28 ;
+  :range 11.5 ;
+  :hasSplash false .
+
+:hunter a :Troop ;
+  rdfs:label "Hunter" ;
+  :hasRarity :Epic ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 553 ;
+  :damage 5210520 ;
+  :range 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:golem a :Troop ;
+  rdfs:label "Golem" ;
+  :hasRarity :Epic ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 8 ;
+  :count 1 ;
+  :hasSplash true .
+
+:elite_barbarians a :Troop ;
+  rdfs:label "Elite Barbarians" ;
+  :hasRarity :Common ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 524 ;
+  :damage 150 ;
+  :count 2 ;
+  :hasSplash false .
+
+:minion_horde a :Troop ;
+  rdfs:label "Minion Horde" ;
+  :hasRarity :Common ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 90 ;
+  :damage 46 ;
+  :range 2.5 ;
+  :count 6 ;
+  :hasSplash false .
+
+:golem a :Troop ;
+  rdfs:label "Golem" ;
+  :hasRarity :Epic ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 8 ;
+  :count 1 ;
+  :hasSplash true .
+
+:hunter a :Troop ;
+  rdfs:label "Hunter" ;
+  :hasRarity :Epic ;
+  :inArena :Hog_mountain ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 553 ;
+  :damage 5210520 ;
+  :range 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:the_log a :Spell ;
   rdfs:label "The Log" ;
   :hasRarity :Legendary ;
-  :inArena :GoblinStadium ;
-  :hasDamageType :SpellDamage ;
+  :inArena :Electro_valley ;
+  :hasTargetType :Ground ;
   :hasRangeType :LongRange ;
+  :hasDamageType :SpellDamage ;
   :elixirCost 2 ;
-  :radius 1.5 .
+  :damage 220 ;
+  :range 10.1 ;
+  :hasSplash true .
+
+:mega_knight a :Troop ;
+  rdfs:label "Mega Knight" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 7 ;
+  :hitpoints 3307 ;
+  :damage 222 ;
+  :count 1 ;
+  :hasSplash true .
+
+:ram_rider a :Troop ;
+  rdfs:label "Ram Rider" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 1405 ;
+  :count 1 ;
+  :hasSplash false .
+
+:electro_wizard a :Troop ;
+  rdfs:label "Electro Wizard" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 591 ;
+  :damage 952190 ;
+  :range 5 ;
+  :hasSplash false .
+
+:inferno_dragon a :Troop ;
+  rdfs:label "Inferno Dragon" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :hitpoints 1072 ;
+  :range 3.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:sparky a :Troop ;
+  rdfs:label "Sparky" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 6 ;
+  :hitpoints 1202 ;
+  :damage 1102 ;
+  :range 5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:miner a :Troop ;
+  rdfs:label "Miner" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 1002 ;
+  :damage 161 ;
+  :count 1 ;
+  :hasSplash false .
+
+:princess a :Troop ;
+  rdfs:label "Princess" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 3 ;
+  :hitpoints 216 ;
+  :damage 139 ;
+  :range 9 ;
+  :count 1 ;
+  :hasSplash true .
+
+:dagger_duchess a :Troop ;
+  rdfs:label "Dagger Duchess" ;
+  :hasRarity :Legendary ;
+  :inArena :Electro_valley ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :hitpoints 2298 ;
+  :damage 96 ;
+  :range 7.5 ;
+  :hasSplash false .
+
+:firecracker a :Troop ;
+  rdfs:label "Firecracker" ;
+  :hasRarity :Common ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 3 ;
+  :hitpoints 119 ;
+  :damage 255125 ;
+  :range 6 ;
+  :count 1 ;
+  :hasSplash true .
+
+:earthquake a :Spell ;
+  rdfs:label "Earthquake" ;
+  :hasRarity :Rare ;
+  :inArena :Spooky_town ;
+  :hasTargetType :Ground ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :damage 393117 ;
+  :hasSplash true .
+
+:goblin_demolisher a :Troop ;
+  rdfs:label "Goblin Demolisher" ;
+  :hasRarity :Rare ;
+  :inArena :Spooky_town ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 614 ;
+  :damage 88 ;
+  :range 5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:electro_dragon a :Troop ;
+  rdfs:label "Electro Dragon" ;
+  :hasRarity :Epic ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 593 ;
+  :damage 1203 ;
+  :range 3.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:wall_breakers a :Troop ;
+  rdfs:label "Wall Breakers" ;
+  :hasRarity :Epic ;
+  :inArena :Spooky_town ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 2 ;
+  :hitpoints 206 ;
+  :damage 244 ;
+  :count 2 ;
+  :hasSplash true .
+
+:graveyard a :Spell ;
+  rdfs:label "Graveyard" ;
+  :hasRarity :Legendary ;
+  :inArena :Spooky_town ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 5 ;
+  :hasSplash true .
+
+:phoenix a :Troop ;
+  rdfs:label "Phoenix" ;
+  :hasRarity :Legendary ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 871 ;
+  :damage 180 ;
+  :count 1 ;
+  :hasSplash true .
+
+:royal_ghost a :Troop ;
+  rdfs:label "Royal Ghost" ;
+  :hasRarity :Legendary ;
+  :inArena :Spooky_town ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 3 ;
+  :hitpoints 1002 ;
+  :damage 216 ;
+  :count 1 ;
+  :hasSplash true .
+
+:ice_wizard a :Troop ;
+  rdfs:label "Ice Wizard" ;
+  :hasRarity :Legendary ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 3 ;
+  :hitpoints 570 ;
+  :damage 74 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:wall_breakers a :Troop ;
+  rdfs:label "Wall Breakers" ;
+  :hasRarity :Epic ;
+  :inArena :Spooky_town ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 2 ;
+  :hitpoints 206 ;
+  :damage 244 ;
+  :count 2 ;
+  :hasSplash true .
+
+:electro_dragon a :Troop ;
+  rdfs:label "Electro Dragon" ;
+  :hasRarity :Epic ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 593 ;
+  :damage 1203 ;
+  :range 3.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:firecracker a :Troop ;
+  rdfs:label "Firecracker" ;
+  :hasRarity :Common ;
+  :inArena :Spooky_town ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 3 ;
+  :hitpoints 119 ;
+  :damage 255125 ;
+  :range 6 ;
+  :count 1 ;
+  :hasSplash true .
+
+:rascals a :Troop ;
+  rdfs:label "Rascals" ;
+  :hasRarity :Common ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:rascals a :Troop ;
+  rdfs:label "Rascals" ;
+  :hasRarity :Common ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:heal_spirit a :Troop ;
+  rdfs:label "Heal Spirit" ;
+  :hasRarity :Rare ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :ShortRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 1 ;
+  :hitpoints 108 ;
+  :damage 52 ;
+  :range 2.5 ;
+  :hasSplash true .
+
+:suspicious_bush a :Troop ;
+  rdfs:label "Suspicious Bush" ;
+  :hasRarity :Rare ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 2 ;
+  :count 1 ;
+  :hasSplash false .
+
+:electro_giant a :Troop ;
+  rdfs:label "Electro Giant" ;
+  :hasRarity :Epic ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 7 ;
+  :hitpoints 2409 ;
+  :damage 102 ;
+  :count 1 ;
+  :hasSplash false .
+
+:bowler a :Troop ;
+  rdfs:label "Bowler" ;
+  :hasRarity :Epic ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 1300 ;
+  :damage 180 ;
+  :range 4 ;
+  :hasSplash true .
+
+:magic_archer a :Troop ;
+  rdfs:label "Magic Archer" ;
+  :hasRarity :Legendary ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :hitpoints 438 ;
+  :damage 110 ;
+  :range 7 ;
+  :count 1 ;
+  :hasSplash true .
+
+:bandit a :Troop ;
+  rdfs:label "Bandit" ;
+  :hasRarity :Legendary ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 750 ;
+  :damage 161 ;
+  :count 1 ;
+  :hasSplash false .
+
+:lava_hound a :Troop ;
+  rdfs:label "Lava Hound" ;
+  :hasRarity :Legendary ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 7 ;
+  :range 3.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:royal_chef a :Troop ;
+  rdfs:label "Royal Chef" ;
+  :hasRarity :Legendary ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :LongRange ;
+  :hasDamageType :Ranged ;
+  :hitpoints 2244 ;
+  :damage 90 ;
+  :range 7.5 ;
+  :hasSplash false .
+
+:bowler a :Troop ;
+  rdfs:label "Bowler" ;
+  :hasRarity :Epic ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 1300 ;
+  :damage 180 ;
+  :range 4 ;
+  :hasSplash true .
+
+:electro_giant a :Troop ;
+  rdfs:label "Electro Giant" ;
+  :hasRarity :Epic ;
+  :inArena :Rascal_s_hideout ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 7 ;
+  :hitpoints 2409 ;
+  :damage 102 ;
+  :count 1 ;
+  :hasSplash false .
+
+:royal_delivery a :Spell ;
+  rdfs:label "Royal Delivery" ;
+  :hasRarity :Common ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:elixir_golem a :Troop ;
+  rdfs:label "Elixir Golem" ;
+  :hasRarity :Rare ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :count 1 ;
+  :hasSplash false .
+
+:goblin_curse a :Spell ;
+  rdfs:label "Goblin Curse" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :hasSplash true .
+
+:rage a :Spell ;
+  rdfs:label "Rage" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :BuildingsOnly ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 106 ;
+  :hasSplash true .
+
+:goblin_drill a :Building ;
+  rdfs:label "Goblin Drill" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:executioner a :Troop ;
+  rdfs:label "Executioner" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 800 ;
+  :damage 1052210 ;
+  :range 4.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:night_witch a :Troop ;
+  rdfs:label "Night Witch" ;
+  :hasRarity :Legendary ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:lumberjack a :Troop ;
+  rdfs:label "Lumberjack" ;
+  :hasRarity :Legendary ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 1060 ;
+  :hasSplash false .
+
+:goblin_drill a :Building ;
+  rdfs:label "Goblin Drill" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hasSplash false .
+
+:executioner a :Troop ;
+  rdfs:label "Executioner" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 5 ;
+  :hitpoints 800 ;
+  :damage 1052210 ;
+  :range 4.5 ;
+  :count 1 ;
+  :hasSplash true .
+
+:goblin_curse a :Spell ;
+  rdfs:label "Goblin Curse" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :hasSplash true .
+
+:rage a :Spell ;
+  rdfs:label "Rage" ;
+  :hasRarity :Epic ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :BuildingsOnly ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 2 ;
+  :damage 106 ;
+  :hasSplash true .
+
+:royal_delivery a :Spell ;
+  rdfs:label "Royal Delivery" ;
+  :hasRarity :Common ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:night_witch a :Troop ;
+  rdfs:label "Night Witch" ;
+  :hasRarity :Legendary ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :count 1 ;
+  :hasSplash false .
+
+:mother_witch a :Troop ;
+  rdfs:label "Mother Witch" ;
+  :hasRarity :Legendary ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:elixir_golem a :Troop ;
+  rdfs:label "Elixir Golem" ;
+  :hasRarity :Rare ;
+  :inArena :Serenity_peak ;
+  :hasTargetType :BuildingsOnly ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :count 1 ;
+  :hasSplash false .
+
+:elixir_collector a :Building ;
+  rdfs:label "Elixir Collector" ;
+  :hasRarity :Rare ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 505 ;
+  :hasSplash false .
+
+:elixir_collector a :Building ;
+  rdfs:label "Elixir Collector" ;
+  :hasRarity :Rare ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 505 ;
+  :hasSplash false .
+
+:void a :Spell ;
+  rdfs:label "Void" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:clone a :Spell ;
+  rdfs:label "Clone" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:tornado a :Spell ;
+  rdfs:label "Tornado" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :damage 52 ;
+  :hasSplash true .
+
+:mirror a :Spell ;
+  rdfs:label "Mirror" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 1 ;
+  :hasSplash true .
+
+:cannon_cart a :Troop ;
+  rdfs:label "Cannon Cart" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 1131 ;
+  :damage 132 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:spirit_empress a :Troop ;
+  rdfs:label "Spirit Empress" ;
+  :hasRarity :Legendary ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :Melee ;
+  :elixirCost 663 ;
+  :damage 249 ;
+  :hasSplash false .
+
+:goblin_machine a :Troop ;
+  rdfs:label "Goblin Machine" ;
+  :hasRarity :Legendary ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 1780 ;
+  :damage 175 ;
+  :count 1 ;
+  :hasSplash false .
+
+:mother_witch a :Troop ;
+  rdfs:label "Mother Witch" ;
+  :hasRarity :Legendary ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 4 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:fisherman a :Troop ;
+  rdfs:label "Fisherman" ;
+  :hasRarity :Legendary ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 3 ;
+  :hitpoints 720 ;
+  :damage 161 ;
+  :hasSplash false .
+
+:clone a :Spell ;
+  rdfs:label "Clone" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:mirror a :Spell ;
+  rdfs:label "Mirror" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 1 ;
+  :hasSplash true .
+
+:tornado a :Spell ;
+  rdfs:label "Tornado" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :damage 52 ;
+  :hasSplash true .
+
+:void a :Spell ;
+  rdfs:label "Void" ;
+  :hasRarity :Epic ;
+  :inArena :Miner_s_mine ;
+  :hasTargetType :GroundAndAir ;
+  :hasDamageType :SpellDamage ;
+  :elixirCost 3 ;
+  :hasSplash true .
+
+:golden_knight a :Troop ;
+  rdfs:label "Golden Knight" ;
+  :hasRarity :Champion ;
+  :inArena :Executioner_s_kitchen ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 1799 ;
+  :damage 161 ;
+  :count 1 ;
+  :hasSplash false .
+
+:skeleton_king a :Troop ;
+  rdfs:label "Skeleton King" ;
+  :hasRarity :Champion ;
+  :inArena :Executioner_s_kitchen ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :AreaDamage ;
+  :elixirCost 4 ;
+  :count 1 ;
+  :hasSplash true .
+
+:boss_bandit a :Troop ;
+  rdfs:label "Boss Bandit" ;
+  :hasRarity :Champion ;
+  :inArena :Royal_crypt ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 6 ;
+  :hitpoints 2624 ;
+  :damage 268 ;
+  :count 1 ;
+  :hasSplash false .
+
+:archer_queen a :Troop ;
+  rdfs:label "Archer Queen" ;
+  :hasRarity :Champion ;
+  :inArena :Royal_crypt ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :hitpoints 1000 ;
+  :damage 225 ;
+  :range 5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:mighty_miner a :Troop ;
+  rdfs:label "Mighty Miner" ;
+  :hasRarity :Champion ;
+  :inArena :Royal_crypt ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 4 ;
+  :hitpoints 2250 ;
+  :count 1 ;
+  :hasSplash false .
+
+:goblinstein a :Troop ;
+  rdfs:label "Goblinstein" ;
+  :hasRarity :Champion ;
+  :inArena :Silent_sanctuary ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 5 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:little_prince a :Troop ;
+  rdfs:label "Little Prince" ;
+  :hasRarity :Champion ;
+  :inArena :Silent_sanctuary ;
+  :hasTargetType :GroundAndAir ;
+  :hasRangeType :MediumRange ;
+  :hasDamageType :Ranged ;
+  :elixirCost 3 ;
+  :range 5.5 ;
+  :count 1 ;
+  :hasSplash false .
+
+:monk a :Troop ;
+  rdfs:label "Monk" ;
+  :hasRarity :Champion ;
+  :inArena :Silent_sanctuary ;
+  :hasTargetType :Ground ;
+  :hasRangeType :MeleeRange ;
+  :hasDamageType :Melee ;
+  :elixirCost 5 ;
+  :hitpoints 2150 ;
+  :damage 140 ;
+  :count 1 ;
+  :hasSplash false .
+
 
 #################################################################
 # Relationships among cards
