@@ -1,74 +1,18 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Clash Royale Knowledge Base
-% Derived from: http://example.org/clashroyale#
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% -------------------------------
-% Class hierarchy
-% -------------------------------
-
-class(card).
-class(troop).
-class(building).
-class(spell).
-class(deck).
-class(rarity).
-class(arena).
-class(target_type).
-class(damage_type).
-class(range_type).
-class(speed_class).
-class(ability).
-class(win_condition).
-
-subclass(troop, card).
-subclass(building, card).
-subclass(spell, card).
-
-% -------------------------------
-% Enumerations / individuals
-% -------------------------------
-
-% Rarity
-rarity(common).
-rarity(rare).
-rarity(epic).
-rarity(legendary).
-rarity(champion).
-
-% Target type
-target_type(ground).
-target_type(air).
-target_type(ground_and_air).
-target_type(buildings_only).
-
-% Damage type
-damage_type(melee).
-damage_type(ranged).
-damage_type(area_damage).
-damage_type(spell_damage).
-
-% Range type
-range_type(melee_range).
-range_type(short_range).
-range_type(medium_range).
-range_type(long_range).
-
-% Speed class
-speed_class(slow).
-speed_class(medium).
-speed_class(fast).
-
-% Arena
-arena(training_camp, 0).
-arena(goblin_stadium, 1).
-
-% Win condition
-win_condition(hog_pressure).
-
 % -------------------------------
 % Cards (facts)
 % -------------------------------
+
+:- discontiguous card/2.
+:- discontiguous has_rarity/2.
+:- discontiguous elixir_cost/2.
+:- discontiguous in_arena/2.
+:- discontiguous damage/2.
+:- discontiguous hitpoints/2.
+:- discontiguous targets/2.
+:- discontiguous melee_or_ranged/2.
+:- discontiguous splash/2.
+:- discontiguous count/2.
+:- discontiguous range_value/2.
 
 card(arrows, spell).
 has_rarity(arrows, common).
@@ -1660,7 +1604,7 @@ count(electro_giant, 1).
 
 card(royal_delivery, spell).
 has_rarity(royal_delivery, common).
-elixir_cost(royal_delivery, 3).
+elixir_cost(royal_delivery, 3). 
 in_arena(royal_delivery, serenity_peak).
 targets(royal_delivery, air).
 targets(royal_delivery, ground).
@@ -2028,77 +1972,3 @@ targets(monk, ground).
 melee_or_ranged(monk, melee).
 splash(monk, false).
 count(monk, 1).
-
-
-% -------------------------------
-% Relationships
-% -------------------------------
-
-synergizes_with(hog_rider, ice_golem).
-synergizes_with(hog_rider, fireball).
-counters(cannon, hog_rider).
-counters(the_log, skeletons).
-
-% symmetric relation
-synergizes_with(X, Y) :- synergizes_with(Y, X).
-
-% -------------------------------
-% Deck
-% -------------------------------
-
-deck(hog_cycle_deck, hog_pressure).
-has_card(hog_cycle_deck, hog_rider).
-has_card(hog_cycle_deck, fireball).
-has_card(hog_cycle_deck, cannon).
-has_card(hog_cycle_deck, musketeer).
-has_card(hog_cycle_deck, ice_golem).
-has_card(hog_cycle_deck, skeletons).
-has_card(hog_cycle_deck, ice_spirit).
-has_card(hog_cycle_deck, the_log).
-
-% -------------------------------
-% Derived rules (reasoning)
-% -------------------------------
-
-% win condition card (targets buildings only)
-is_wincon_card(Card) :-
-    has_target_type(Card, buildings_only).
-
-% ranged troop
-is_ranged_troop(Card) :-
-    card(Card, troop),
-    has_damage_type(Card, ranged).
-
-% cheap cycle card (elixir <= 2)
-is_cycle_card(Card) :-
-    elixir_cost(Card, Cost),
-    Cost =< 2.
-
-% tank (hitpoints > 800)
-is_tank(Card) :-
-    hitpoints(Card, HP),
-    HP > 800.
-
-% fast troop
-is_fast_troop(Card) :-
-    card(Card, troop),
-    has_speed_class(Card, fast).
-
-% classify cards by role
-role(Card, tank) :- is_tank(Card), has_speed_class(Card, slow).
-role(Card, support) :- is_ranged_troop(Card).
-role(Card, wincon) :- is_wincon_card(Card).
-role(Card, cycle) :- is_cycle_card(Card).
-role(Card, spell) :- card(Card, spell).
-
-% convenience rule to print card info
-info(Card) :-
-    card(Card, Type),
-    write('Card: '), write(Card), nl,
-    write('Type: '), write(Type), nl,
-    (has_rarity(Card, Rarity) -> format('Rarity: ~w~n',[Rarity]) ; true),
-    (elixir_cost(Card, Cost) -> format('Elixir: ~w~n',[Cost]) ; true),
-    (hitpoints(Card, HP) -> format('HP: ~w~n',[HP]) ; true),
-    (damage(Card, Dmg) -> format('Damage: ~w~n',[Dmg]) ; true),
-    (has_speed_class(Card, Spd) -> format('Speed: ~w~n',[Spd]) ; true),
-    nl.
