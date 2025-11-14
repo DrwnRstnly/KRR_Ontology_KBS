@@ -13,8 +13,6 @@ from __future__ import annotations
 import re
 import time
 import json
-import csv
-import math
 from dataclasses import dataclass, asdict
 from typing import Dict, List, Optional, Any
 from urllib.parse import urljoin
@@ -56,7 +54,11 @@ class CardDetails:
     type: Optional[str]
     arena_text: Optional[str]
     unit_attributes: Dict[str, Any]
-    level_stats: List[Dict[str, Any]]
+    level_11_stats: Optional[Dict[str, Any]]
+    damage: Optional[float]
+    hitpoints: Optional[float]
+    damage_per_second: Optional[float]
+    transport: Optional[str]
 
 
 def get_soup(url: str) -> BeautifulSoup:
@@ -81,15 +83,8 @@ def parse_arenas_index() -> Dict[int, Dict[str, Any]]:
     time.sleep(REQUEST_GAP_SEC)
 
     arenas: Dict[int, Dict[str, Any]] = {}
-    # Strategy:
-    # - Each arena block appears inside a TD that also contains one or more
-    #   <span class="cr-display-card" data-card-name=... data-card-arena="N">
-    # - We read the text content before the icons to get arena name like
-    #   "Goblin Stadium (Arena 1)" or "Training Camp (Tutorial)"
     for td in soup.select("table.wikitable td"):
-        # Extract a line that looks like the arena label
         text = normalize_space(td.get_text(separator="\n", strip=True))
-        # Find "Something (Arena N)" or "Training Camp"
         arena_name = None
         arena_number = None
 
@@ -107,7 +102,6 @@ def parse_arenas_index() -> Dict[int, Dict[str, Any]]:
         if not icons:
             continue
 
-        # If the TD has no parsable arena number, fallback to the first child span attribute
         if arena_number is None:
             span = td.select_one("span.cr-display-card")
             if span and span.has_attr("data-card-arena"):
@@ -117,7 +111,6 @@ def parse_arenas_index() -> Dict[int, Dict[str, Any]]:
                     pass
 
         if arena_number is None:
-            # skip ambiguous chunk
             continue
 
         if arena_number not in arenas:
@@ -153,12 +146,10 @@ def text_after_heading(soup: BeautifulSoup, heading: str) -> Optional[str]:
     node = soup.find(lambda t: t.name in ("h2", "h3") and normalize_space(t.get_text()).lower() == heading.lower())
     if not node:
         return None
-    # walk siblings until nonempty text
     for sib in node.next_siblings:
         if isinstance(sib, Tag):
             txt = normalize_space(sib.get_text(" ", strip=True))
             if txt:
-                # Often includes word like "Image: Elixir" at end
                 txt = re.sub(r"\bImage:.*$", "", txt).strip()
                 return txt
         else:
@@ -175,10 +166,9 @@ def parse_unit_attributes_table(soup: BeautifulSoup) -> Dict[str, Any]:
     """
     table = soup.find("table", id="unit-attributes-table")
     if not table:
-        # fallback: any wikitable with these key headers
         for cand in soup.select("table.wikitable"):
             headers = [normalize_space(th.get_text()) for th in cand.select("tr th")]
-            if {"Cost", "Hit Speed", "Range", "Target"}.issubset(set(headers)):
+            if {"Cost", "Range", "Target"}.issubset(set(headers)):
                 table = cand
                 break
     if not table:
@@ -189,7 +179,6 @@ def parse_unit_attributes_table(soup: BeautifulSoup) -> Dict[str, Any]:
         return {}
 
     headers = [normalize_space(th.get_text()) for th in rows[0].select("th")]
-    # some tables repeat headers as images with alt text, handled above
     first = rows[1].select("td")
     if not first:
         return {}
@@ -197,10 +186,9 @@ def parse_unit_attributes_table(soup: BeautifulSoup) -> Dict[str, Any]:
     values = []
     for td in first:
         txt = normalize_space(td.get_text(" ", strip=True))
-        txt = re.sub(r"\s*\(.*?\)\s*$", "", txt)  # trim trailing parentheses like "(120)"
+        txt = re.sub(r"\s*\(.*?\)\s*$", "", txt)
         values.append(txt)
 
-    # Align lengths
     out: Dict[str, Any] = {}
     for i, h in enumerate(headers):
         if i < len(values):
@@ -211,7 +199,6 @@ def parse_unit_attributes_table(soup: BeautifulSoup) -> Dict[str, Any]:
 def parse_level_stats_table(soup: BeautifulSoup) -> List[Dict[str, Any]]:
     table = soup.find("table", id="unit-statistics-table")
     if not table:
-        # fallback: look for a table with "Level" in first th
         for cand in soup.select("table.wikitable"):
             ths = cand.select("tr th")
             if ths and normalize_space(ths[0].get_text()).lower() == "level":
@@ -241,13 +228,17 @@ def parse_level_stats_table(soup: BeautifulSoup) -> List[Dict[str, Any]]:
 def to_number_maybe(x: Optional[str]) -> Optional[float]:
     if x is None:
         return None
-    s = x.strip()
-    s = re.sub(r"[^\d\.\-]", "", s)  # drop non numeric
+    s = str(x).strip()
+    
+    m = re.search(r"^([\d,\.]+)", s)
+    if not m:
+        return None
+        
+    s = m.group(1).replace(',', '')  # Remove commas
+    
     if not s:
         return None
     try:
-        if s.isdigit():
-            return float(int(s))
         return float(s)
     except Exception:
         return None
@@ -257,7 +248,6 @@ def parse_card_page(url: str) -> CardDetails:
     soup = get_soup(url)
     time.sleep(REQUEST_GAP_SEC)
 
-    # name from H1 or title
     h1 = soup.find("h1")
     name = normalize_space(h1.get_text()) if h1 else normalize_space(soup.title.get_text() if soup.title else url)
 
@@ -269,8 +259,38 @@ def parse_card_page(url: str) -> CardDetails:
     unit_attrs = parse_unit_attributes_table(soup)
     level_stats = parse_level_stats_table(soup)
 
-    # If unit_attrs includes Cost, Rarity, Type those should align with headings
     elixir_val = to_number_maybe(elixir_txt or unit_attrs.get("Cost"))
+    transport = unit_attrs.get("Transport")
+
+    level_11_stats = next((item for item in level_stats if item.get("Level") == "11"), None)
+    
+    damage = None
+    hitpoints = None
+    dps = None
+
+    if level_11_stats:
+        hitpoints = to_number_maybe(level_11_stats.get("Hitpoints"))
+        dps = to_number_maybe(level_11_stats.get("Damage per second"))
+        
+        dmg_val = (
+            level_11_stats.get("Area Damage") or
+            level_11_stats.get("Damage") or
+            level_11_stats.get("Spawn Damage") or
+            level_11_stats.get("Dash Damage") or
+            level_11_stats.get("Jump Damage")
+        )
+        if dmg_val:
+            damage = to_number_maybe(dmg_val)
+
+    elif not level_11_stats and level_stats:
+        first_level_stats = level_stats[0]
+        if first_level_stats.get("Level") == "11":
+            level_11_stats = first_level_stats
+            hitpoints = to_number_maybe(first_level_stats.get("Hitpoints"))
+            dps = to_number_maybe(first_level_stats.get("Damage per second"))
+            dmg_val = first_level_stats.get("Damage") or first_level_stats.get("Area Damage")
+            if dmg_val:
+                damage = to_number_maybe(dmg_val)
 
     return CardDetails(
         name=name,
@@ -280,14 +300,17 @@ def parse_card_page(url: str) -> CardDetails:
         type=type_txt or unit_attrs.get("Type"),
         arena_text=arena_txt,
         unit_attributes=unit_attrs,
-        level_stats=level_stats,
+        level_11_stats=level_11_stats,
+        damage=damage,
+        hitpoints=hitpoints,
+        damage_per_second=dps,
+        transport=transport.lower() if transport else None
     )
 
 
 def main():
     arenas = parse_arenas_index()
 
-    # Visit each card page and enrich
     results = {}
     flat_rows = []
     for arena_num in sorted(arenas.keys()):
@@ -299,7 +322,7 @@ def main():
             try:
                 details = parse_card_page(cb.href)
             except Exception as e:
-                # Keep the basics if page fails
+                print(f"Failed to parse {cb.href}: {e}")
                 details = CardDetails(
                     name=cb.name,
                     url=cb.href,
@@ -308,7 +331,11 @@ def main():
                     type=None,
                     arena_text=None,
                     unit_attributes={},
-                    level_stats=[],
+                    level_11_stats=None,
+                    damage=None,
+                    hitpoints=None,
+                    damage_per_second=None,
+                    transport=None
                 )
             enriched.append(asdict(details))
             flat_rows.append({
@@ -319,18 +346,19 @@ def main():
                 "elixir": details.elixir,
                 "rarity": details.rarity,
                 "type": details.type,
-                "arena_text_on_card": details.arena_text,
+                "damage_lv11": details.damage,
+                "hp_lv11": details.hitpoints,
+                "dps_lv11": details.damage_per_second,
+                "transport": details.transport,
             })
         results[arena_num] = {
             "arena_name": arena_name,
             "cards": enriched,
         }
 
-    # Write JSON
     with open("fandom_arenas_cards.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    # Write CSV
     pd.DataFrame(flat_rows).to_csv("fandom_cards_flat.csv", index=False, encoding="utf-8")
     print("Saved fandom_arenas_cards.json and fandom_cards_flat.csv")
 
