@@ -58,6 +58,7 @@ def main():
     ])
 
     arena_names = {}
+    processed_atoms = set()
 
     for arena_num, arena_data in data.items():
         arena_name = arena_data.get("arena_name", "Unknown Arena")
@@ -74,6 +75,11 @@ def main():
                 continue
 
             atom = format_atom(card_name)
+            if atom in processed_atoms:
+                    continue
+
+            processed_atoms.add(atom)
+            
             card_type = str(card.get("type", "unknown")).lower()
 
             prolog_facts.append(f"card({atom}, {card_type}).")

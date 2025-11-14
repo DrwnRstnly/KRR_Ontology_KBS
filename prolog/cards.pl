@@ -12,6 +12,7 @@
 :- discontiguous transport/2.
 :- discontiguous damage_per_second/2.
 
+
 card(arrows, spell).
 has_rarity(arrows, common).
 elixir_cost(arrows, 3).
@@ -109,7 +110,7 @@ splash(giant, false).
 melee_or_ranged(giant, melee).
 count(giant, 1).
 
-card(tower_princess, tower troop).
+card(tower_princess, tower_troop).
 has_rarity(tower_princess, common).
 in_arena(tower_princess, training_camp).
 damage(tower_princess, 109).
@@ -160,46 +161,6 @@ elixir_cost(goblin_hut, 4).
 in_arena(goblin_hut, goblin_stadium).
 splash(goblin_hut, false).
 
-card(goblins, troop).
-has_rarity(goblins, common).
-elixir_cost(goblins, 2).
-in_arena(goblins, goblin_stadium).
-damage(goblins, 120).
-hitpoints(goblins, 202).
-damage_per_second(goblins, 109).
-transport(goblins, ground).
-targets(goblins, ground).
-splash(goblins, false).
-melee_or_ranged(goblins, melee).
-count(goblins, 4).
-
-card(spear_goblins, troop).
-has_rarity(spear_goblins, common).
-elixir_cost(spear_goblins, 2).
-in_arena(spear_goblins, goblin_stadium).
-damage(spear_goblins, 81).
-hitpoints(spear_goblins, 133).
-damage_per_second(spear_goblins, 47).
-transport(spear_goblins, ground).
-targets(spear_goblins, air).
-targets(spear_goblins, ground).
-splash(spear_goblins, false).
-melee_or_ranged(spear_goblins, ranged).
-range_value(spear_goblins, 5).
-count(spear_goblins, 3).
-
-card(goblin_cage, building).
-has_rarity(goblin_cage, rare).
-elixir_cost(goblin_cage, 4).
-in_arena(goblin_cage, goblin_stadium).
-splash(goblin_cage, false).
-
-card(goblin_hut, building).
-has_rarity(goblin_hut, rare).
-elixir_cost(goblin_hut, 4).
-in_arena(goblin_hut, goblin_stadium).
-splash(goblin_hut, false).
-
 card(bomber, troop).
 has_rarity(bomber, common).
 elixir_cost(bomber, 2).
@@ -226,52 +187,6 @@ targets(skeletons, ground).
 splash(skeletons, false).
 melee_or_ranged(skeletons, melee).
 count(skeletons, 3).
-
-card(tombstone, building).
-has_rarity(tombstone, rare).
-elixir_cost(tombstone, 3).
-in_arena(tombstone, bone_pit).
-splash(tombstone, false).
-
-card(valkyrie, troop).
-has_rarity(valkyrie, rare).
-elixir_cost(valkyrie, 4).
-in_arena(valkyrie, bone_pit).
-damage(valkyrie, 266).
-hitpoints(valkyrie, 1907).
-damage_per_second(valkyrie, 177).
-transport(valkyrie, ground).
-targets(valkyrie, ground).
-splash(valkyrie, true).
-melee_or_ranged(valkyrie, melee).
-count(valkyrie, 1).
-
-card(skeletons, troop).
-has_rarity(skeletons, common).
-elixir_cost(skeletons, 1).
-in_arena(skeletons, bone_pit).
-damage(skeletons, 81).
-hitpoints(skeletons, 81).
-damage_per_second(skeletons, 81).
-transport(skeletons, ground).
-targets(skeletons, ground).
-splash(skeletons, false).
-melee_or_ranged(skeletons, melee).
-count(skeletons, 3).
-
-card(bomber, troop).
-has_rarity(bomber, common).
-elixir_cost(bomber, 2).
-in_arena(bomber, bone_pit).
-damage(bomber, 225).
-hitpoints(bomber, 304).
-damage_per_second(bomber, 125).
-transport(bomber, ground).
-targets(bomber, ground).
-splash(bomber, true).
-melee_or_ranged(bomber, ranged).
-range_value(bomber, 4).
-count(bomber, 1).
 
 card(tombstone, building).
 has_rarity(tombstone, rare).
@@ -340,55 +255,6 @@ targets(battle_ram, buildings).
 splash(battle_ram, false).
 melee_or_ranged(battle_ram, melee).
 count(battle_ram, 1).
-
-card(barbarians, troop).
-has_rarity(barbarians, common).
-elixir_cost(barbarians, 5).
-in_arena(barbarians, barbarian_bowl).
-damage(barbarians, 192).
-hitpoints(barbarians, 670).
-damage_per_second(barbarians, 147).
-transport(barbarians, ground).
-targets(barbarians, ground).
-splash(barbarians, false).
-melee_or_ranged(barbarians, melee).
-count(barbarians, 5).
-
-card(cannon, building).
-has_rarity(cannon, common).
-elixir_cost(cannon, 3).
-in_arena(cannon, barbarian_bowl).
-damage(cannon, 212).
-hitpoints(cannon, 824).
-damage_per_second(cannon, 212).
-targets(cannon, ground).
-splash(cannon, false).
-melee_or_ranged(cannon, ranged).
-range_value(cannon, 5).
-
-card(battle_ram, troop).
-has_rarity(battle_ram, rare).
-elixir_cost(battle_ram, 4).
-in_arena(battle_ram, barbarian_bowl).
-transport(battle_ram, ground).
-targets(battle_ram, buildings).
-splash(battle_ram, false).
-melee_or_ranged(battle_ram, melee).
-count(battle_ram, 1).
-
-card(mega_minion, troop).
-has_rarity(mega_minion, rare).
-elixir_cost(mega_minion, 3).
-in_arena(mega_minion, barbarian_bowl).
-damage(mega_minion, 312).
-hitpoints(mega_minion, 837).
-damage_per_second(mega_minion, 208).
-transport(mega_minion, air).
-targets(mega_minion, air).
-targets(mega_minion, ground).
-splash(mega_minion, false).
-melee_or_ranged(mega_minion, melee).
-count(mega_minion, 1).
 
 card(electro_spirit, troop).
 has_rarity(electro_spirit, common).
@@ -471,60 +337,6 @@ melee_or_ranged(wizard, ranged).
 range_value(wizard, 5).
 count(wizard, 1).
 
-card(inferno_tower, building).
-has_rarity(inferno_tower, rare).
-elixir_cost(inferno_tower, 5).
-in_arena(inferno_tower, spell_valley).
-hitpoints(inferno_tower, 1748).
-targets(inferno_tower, air).
-targets(inferno_tower, ground).
-splash(inferno_tower, false).
-melee_or_ranged(inferno_tower, ranged).
-range_value(inferno_tower, 6).
-
-card(wizard, troop).
-has_rarity(wizard, rare).
-elixir_cost(wizard, 5).
-in_arena(wizard, spell_valley).
-damage(wizard, 281).
-hitpoints(wizard, 755).
-damage_per_second(wizard, 200).
-transport(wizard, ground).
-targets(wizard, air).
-targets(wizard, ground).
-splash(wizard, true).
-melee_or_ranged(wizard, ranged).
-range_value(wizard, 5).
-count(wizard, 1).
-
-card(fire_spirit, troop).
-has_rarity(fire_spirit, common).
-elixir_cost(fire_spirit, 1).
-in_arena(fire_spirit, spell_valley).
-damage(fire_spirit, 207).
-hitpoints(fire_spirit, 230).
-transport(fire_spirit, ground).
-targets(fire_spirit, air).
-targets(fire_spirit, ground).
-splash(fire_spirit, true).
-melee_or_ranged(fire_spirit, ranged).
-range_value(fire_spirit, 2).
-count(fire_spirit, 1).
-
-card(electro_spirit, troop).
-has_rarity(electro_spirit, common).
-elixir_cost(electro_spirit, 1).
-in_arena(electro_spirit, spell_valley).
-damage(electro_spirit, 99).
-hitpoints(electro_spirit, 230).
-transport(electro_spirit, ground).
-targets(electro_spirit, air).
-targets(electro_spirit, ground).
-splash(electro_spirit, false).
-melee_or_ranged(electro_spirit, ranged).
-range_value(electro_spirit, 2).
-count(electro_spirit, 1).
-
 card(zap, spell).
 has_rarity(zap, common).
 elixir_cost(zap, 2).
@@ -595,57 +407,6 @@ targets(hog_rider, buildings).
 splash(hog_rider, false).
 melee_or_ranged(hog_rider, melee).
 count(hog_rider, 1).
-
-card(zap, spell).
-has_rarity(zap, common).
-elixir_cost(zap, 2).
-in_arena(zap, builders_workshop).
-damage(zap, 192).
-targets(zap, air).
-targets(zap, ground).
-splash(zap, false).
-
-card(bats, troop).
-has_rarity(bats, common).
-elixir_cost(bats, 2).
-in_arena(bats, builders_workshop).
-damage(bats, 81).
-hitpoints(bats, 81).
-damage_per_second(bats, 62).
-transport(bats, air).
-targets(bats, air).
-targets(bats, ground).
-splash(bats, false).
-melee_or_ranged(bats, melee).
-count(bats, 5).
-
-card(hog_rider, troop).
-has_rarity(hog_rider, rare).
-elixir_cost(hog_rider, 4).
-in_arena(hog_rider, builders_workshop).
-damage(hog_rider, 317).
-hitpoints(hog_rider, 1697).
-damage_per_second(hog_rider, 198).
-transport(hog_rider, ground).
-targets(hog_rider, buildings).
-splash(hog_rider, false).
-melee_or_ranged(hog_rider, melee).
-count(hog_rider, 1).
-
-card(flying_machine, troop).
-has_rarity(flying_machine, rare).
-elixir_cost(flying_machine, 4).
-in_arena(flying_machine, builders_workshop).
-damage(flying_machine, 171).
-hitpoints(flying_machine, 614).
-damage_per_second(flying_machine, 155).
-transport(flying_machine, air).
-targets(flying_machine, air).
-targets(flying_machine, ground).
-splash(flying_machine, false).
-melee_or_ranged(flying_machine, ranged).
-range_value(flying_machine, 6).
-count(flying_machine, 1).
 
 card(goblin_barrel, spell).
 has_rarity(goblin_barrel, epic).
@@ -721,53 +482,6 @@ targets(pekka, ground).
 splash(pekka, false).
 melee_or_ranged(pekka, melee).
 count(pekka, 1).
-
-card(skeleton_army, troop).
-has_rarity(skeleton_army, epic).
-elixir_cost(skeleton_army, 3).
-in_arena(skeleton_army, pekkas_playhouse).
-damage(skeleton_army, 81).
-hitpoints(skeleton_army, 81).
-damage_per_second(skeleton_army, 81).
-transport(skeleton_army, ground).
-targets(skeleton_army, ground).
-splash(skeleton_army, false).
-melee_or_ranged(skeleton_army, melee).
-count(skeleton_army, 15).
-
-card(witch, troop).
-has_rarity(witch, epic).
-elixir_cost(witch, 5).
-in_arena(witch, pekkas_playhouse).
-damage(witch, 135).
-hitpoints(witch, 839).
-damage_per_second(witch, 122).
-transport(witch, ground).
-targets(witch, air).
-targets(witch, ground).
-splash(witch, true).
-melee_or_ranged(witch, ranged).
-range_value(witch, 5).
-count(witch, 1).
-
-card(goblin_barrel, spell).
-has_rarity(goblin_barrel, epic).
-elixir_cost(goblin_barrel, 3).
-in_arena(goblin_barrel, pekkas_playhouse).
-splash(goblin_barrel, false).
-
-card(guards, troop).
-has_rarity(guards, epic).
-elixir_cost(guards, 3).
-in_arena(guards, pekkas_playhouse).
-damage(guards, 117).
-hitpoints(guards, 81).
-damage_per_second(guards, 117).
-transport(guards, ground).
-targets(guards, ground).
-splash(guards, false).
-melee_or_ranged(guards, melee).
-count(guards, 3).
 
 card(royal_recruits, troop).
 has_rarity(royal_recruits, common).
@@ -863,61 +577,6 @@ splash(balloon, false).
 melee_or_ranged(balloon, melee).
 count(balloon, 1).
 
-card(royal_giant, troop).
-has_rarity(royal_giant, common).
-elixir_cost(royal_giant, 6).
-in_arena(royal_giant, royal_arena).
-damage(royal_giant, 307).
-hitpoints(royal_giant, 3164).
-damage_per_second(royal_giant, 180).
-transport(royal_giant, ground).
-targets(royal_giant, buildings).
-splash(royal_giant, false).
-melee_or_ranged(royal_giant, ranged).
-range_value(royal_giant, 5).
-count(royal_giant, 1).
-
-card(royal_recruits, troop).
-has_rarity(royal_recruits, common).
-elixir_cost(royal_recruits, 7).
-in_arena(royal_recruits, royal_arena).
-damage(royal_recruits, 133).
-hitpoints(royal_recruits, 547).
-damage_per_second(royal_recruits, 102).
-transport(royal_recruits, ground).
-targets(royal_recruits, ground).
-splash(royal_recruits, false).
-melee_or_ranged(royal_recruits, melee).
-count(royal_recruits, 6).
-
-card(three_musketeers, troop).
-has_rarity(three_musketeers, rare).
-elixir_cost(three_musketeers, 9).
-in_arena(three_musketeers, royal_arena).
-damage(three_musketeers, 217).
-hitpoints(three_musketeers, 721).
-damage_per_second(three_musketeers, 217).
-transport(three_musketeers, ground).
-targets(three_musketeers, air).
-targets(three_musketeers, ground).
-splash(three_musketeers, false).
-melee_or_ranged(three_musketeers, ranged).
-range_value(three_musketeers, 6).
-count(three_musketeers, 3).
-
-card(royal_hogs, troop).
-has_rarity(royal_hogs, rare).
-elixir_cost(royal_hogs, 5).
-in_arena(royal_hogs, royal_arena).
-damage(royal_hogs, 74).
-hitpoints(royal_hogs, 837).
-damage_per_second(royal_hogs, 61).
-transport(royal_hogs, ground).
-targets(royal_hogs, buildings).
-splash(royal_hogs, false).
-melee_or_ranged(royal_hogs, melee).
-count(royal_hogs, 4).
-
 card(giant_snowball, spell).
 has_rarity(giant_snowball, common).
 elixir_cost(giant_snowball, 2).
@@ -1008,7 +667,7 @@ splash(giant_skeleton, false).
 melee_or_ranged(giant_skeleton, melee).
 count(giant_skeleton, 1).
 
-card(cannoneer, tower troop).
+card(cannoneer, tower_troop).
 has_rarity(cannoneer, epic).
 in_arena(cannoneer, frozen_peak).
 damage(cannoneer, 320).
@@ -1019,47 +678,6 @@ targets(cannoneer, ground).
 splash(cannoneer, false).
 melee_or_ranged(cannoneer, ranged).
 range_value(cannoneer, 7).
-
-card(ice_spirit, troop).
-has_rarity(ice_spirit, common).
-elixir_cost(ice_spirit, 1).
-in_arena(ice_spirit, frozen_peak).
-damage(ice_spirit, 110).
-hitpoints(ice_spirit, 230).
-transport(ice_spirit, ground).
-targets(ice_spirit, air).
-targets(ice_spirit, ground).
-splash(ice_spirit, true).
-melee_or_ranged(ice_spirit, ranged).
-range_value(ice_spirit, 2).
-
-card(giant_snowball, spell).
-has_rarity(giant_snowball, common).
-elixir_cost(giant_snowball, 2).
-in_arena(giant_snowball, frozen_peak).
-damage(giant_snowball, 179).
-targets(giant_snowball, air).
-targets(giant_snowball, ground).
-splash(giant_snowball, false).
-
-card(freeze, spell).
-has_rarity(freeze, epic).
-elixir_cost(freeze, 4).
-in_arena(freeze, frozen_peak).
-damage(freeze, 115).
-targets(freeze, air).
-targets(freeze, ground).
-splash(freeze, false).
-
-card(lightning, spell).
-has_rarity(lightning, epic).
-elixir_cost(lightning, 6).
-in_arena(lightning, frozen_peak).
-damage(lightning, 1057).
-targets(lightning, air).
-targets(lightning, ground).
-splash(lightning, false).
-count(lightning, 3).
 
 card(berserker, troop).
 has_rarity(berserker, common).
@@ -1152,46 +770,6 @@ targets(goblin_giant, buildings).
 splash(goblin_giant, false).
 melee_or_ranged(goblin_giant, melee).
 count(goblin_giant, 1).
-
-card(dart_goblin, troop).
-has_rarity(dart_goblin, rare).
-elixir_cost(dart_goblin, 3).
-in_arena(dart_goblin, jungle_arena).
-damage(dart_goblin, 156).
-hitpoints(dart_goblin, 261).
-damage_per_second(dart_goblin, 195).
-transport(dart_goblin, ground).
-targets(dart_goblin, air).
-targets(dart_goblin, ground).
-splash(dart_goblin, false).
-melee_or_ranged(dart_goblin, ranged).
-range_value(dart_goblin, 6).
-count(dart_goblin, 1).
-
-card(barbarian_hut, building).
-has_rarity(barbarian_hut, rare).
-elixir_cost(barbarian_hut, 6).
-in_arena(barbarian_hut, jungle_arena).
-splash(barbarian_hut, false).
-
-card(goblin_giant, troop).
-has_rarity(goblin_giant, epic).
-elixir_cost(goblin_giant, 6).
-in_arena(goblin_giant, jungle_arena).
-transport(goblin_giant, ground).
-targets(goblin_giant, buildings).
-splash(goblin_giant, false).
-melee_or_ranged(goblin_giant, melee).
-count(goblin_giant, 1).
-
-card(poison, spell).
-has_rarity(poison, epic).
-elixir_cost(poison, 4).
-in_arena(poison, jungle_arena).
-damage_per_second(poison, 92).
-targets(poison, air).
-targets(poison, ground).
-splash(poison, false).
 
 card(tesla, building).
 has_rarity(tesla, common).
@@ -1298,59 +876,6 @@ splash(golem, false).
 melee_or_ranged(golem, melee).
 count(golem, 1).
 
-card(elite_barbarians, troop).
-has_rarity(elite_barbarians, common).
-elixir_cost(elite_barbarians, 6).
-in_arena(elite_barbarians, hog_mountain).
-damage(elite_barbarians, 384).
-hitpoints(elite_barbarians, 1341).
-damage_per_second(elite_barbarians, 274).
-transport(elite_barbarians, ground).
-targets(elite_barbarians, ground).
-splash(elite_barbarians, false).
-melee_or_ranged(elite_barbarians, melee).
-count(elite_barbarians, 2).
-
-card(minion_horde, troop).
-has_rarity(minion_horde, common).
-elixir_cost(minion_horde, 5).
-in_arena(minion_horde, hog_mountain).
-damage(minion_horde, 117).
-hitpoints(minion_horde, 230).
-damage_per_second(minion_horde, 117).
-transport(minion_horde, air).
-targets(minion_horde, air).
-targets(minion_horde, ground).
-splash(minion_horde, false).
-melee_or_ranged(minion_horde, ranged).
-range_value(minion_horde, 2).
-count(minion_horde, 6).
-
-card(golem, troop).
-has_rarity(golem, epic).
-elixir_cost(golem, 8).
-in_arena(golem, hog_mountain).
-transport(golem, ground).
-targets(golem, buildings).
-splash(golem, false).
-melee_or_ranged(golem, melee).
-count(golem, 1).
-
-card(hunter, troop).
-has_rarity(hunter, epic).
-elixir_cost(hunter, 4).
-in_arena(hunter, hog_mountain).
-damage(hunter, 84).
-hitpoints(hunter, 885).
-damage_per_second(hunter, 381).
-transport(hunter, ground).
-targets(hunter, air).
-targets(hunter, ground).
-splash(hunter, false).
-melee_or_ranged(hunter, ranged).
-range_value(hunter, 4).
-count(hunter, 1).
-
 card(the_log, spell).
 has_rarity(the_log, legendary).
 elixir_cost(the_log, 2).
@@ -1454,7 +979,7 @@ melee_or_ranged(princess, ranged).
 range_value(princess, 9).
 count(princess, 1).
 
-card(dagger_duchess, tower troop).
+card(dagger_duchess, tower_troop).
 has_rarity(dagger_duchess, legendary).
 in_arena(dagger_duchess, electro_valley).
 damage(dagger_duchess, 107).
@@ -1577,62 +1102,10 @@ melee_or_ranged(ice_wizard, ranged).
 range_value(ice_wizard, 5).
 count(ice_wizard, 1).
 
-card(wall_breakers, troop).
-has_rarity(wall_breakers, epic).
-elixir_cost(wall_breakers, 2).
-in_arena(wall_breakers, spooky_town).
-damage(wall_breakers, 391).
-hitpoints(wall_breakers, 330).
-transport(wall_breakers, ground).
-targets(wall_breakers, buildings).
-splash(wall_breakers, true).
-melee_or_ranged(wall_breakers, melee).
-count(wall_breakers, 2).
-
-card(electro_dragon, troop).
-has_rarity(electro_dragon, epic).
-elixir_cost(electro_dragon, 5).
-in_arena(electro_dragon, spooky_town).
-damage(electro_dragon, 192).
-hitpoints(electro_dragon, 949).
-damage_per_second(electro_dragon, 91).
-transport(electro_dragon, air).
-targets(electro_dragon, air).
-targets(electro_dragon, ground).
-splash(electro_dragon, false).
-melee_or_ranged(electro_dragon, ranged).
-range_value(electro_dragon, 3).
-count(electro_dragon, 1).
-
-card(firecracker, troop).
-has_rarity(firecracker, common).
-elixir_cost(firecracker, 3).
-in_arena(firecracker, spooky_town).
-damage(firecracker, 64).
-hitpoints(firecracker, 304).
-damage_per_second(firecracker, 106).
-transport(firecracker, ground).
-targets(firecracker, air).
-targets(firecracker, ground).
-splash(firecracker, false).
-melee_or_ranged(firecracker, ranged).
-range_value(firecracker, 6).
-count(firecracker, 1).
-
 card(rascals, troop).
 has_rarity(rascals, common).
 elixir_cost(rascals, 5).
 in_arena(rascals, spooky_town).
-transport(rascals, ground).
-targets(rascals, ground).
-splash(rascals, false).
-melee_or_ranged(rascals, melee).
-count(rascals, 1).
-
-card(rascals, troop).
-has_rarity(rascals, common).
-elixir_cost(rascals, 5).
-in_arena(rascals, rascals_hideout).
 transport(rascals, ground).
 targets(rascals, ground).
 splash(rascals, false).
@@ -1728,7 +1201,7 @@ melee_or_ranged(lava_hound, ranged).
 range_value(lava_hound, 3).
 count(lava_hound, 1).
 
-card(royal_chef, tower troop).
+card(royal_chef, tower_troop).
 has_rarity(royal_chef, legendary).
 in_arena(royal_chef, rascals_hideout).
 damage(royal_chef, 109).
@@ -1739,33 +1212,6 @@ targets(royal_chef, ground).
 splash(royal_chef, false).
 melee_or_ranged(royal_chef, ranged).
 range_value(royal_chef, 7).
-
-card(bowler, troop).
-has_rarity(bowler, epic).
-elixir_cost(bowler, 5).
-in_arena(bowler, rascals_hideout).
-damage(bowler, 289).
-hitpoints(bowler, 2081).
-damage_per_second(bowler, 115).
-transport(bowler, ground).
-targets(bowler, ground).
-splash(bowler, false).
-melee_or_ranged(bowler, ranged).
-range_value(bowler, 4).
-count(bowler, 1).
-
-card(electro_giant, troop).
-has_rarity(electro_giant, epic).
-elixir_cost(electro_giant, 7).
-in_arena(electro_giant, rascals_hideout).
-damage(electro_giant, 163).
-hitpoints(electro_giant, 3855).
-damage_per_second(electro_giant, 77).
-transport(electro_giant, ground).
-targets(electro_giant, buildings).
-splash(electro_giant, false).
-melee_or_ranged(electro_giant, melee).
-count(electro_giant, 1).
 
 card(royal_delivery, spell).
 has_rarity(royal_delivery, common).
@@ -1843,62 +1289,6 @@ targets(lumberjack, ground).
 splash(lumberjack, false).
 melee_or_ranged(lumberjack, melee).
 
-card(goblin_drill, building).
-has_rarity(goblin_drill, epic).
-elixir_cost(goblin_drill, 4).
-in_arena(goblin_drill, serenity_peak).
-splash(goblin_drill, false).
-
-card(executioner, troop).
-has_rarity(executioner, epic).
-elixir_cost(executioner, 5).
-in_arena(executioner, serenity_peak).
-damage(executioner, 168).
-hitpoints(executioner, 1280).
-damage_per_second(executioner, 140).
-transport(executioner, ground).
-targets(executioner, air).
-targets(executioner, ground).
-splash(executioner, false).
-melee_or_ranged(executioner, ranged).
-range_value(executioner, 4).
-count(executioner, 1).
-
-card(goblin_curse, spell).
-has_rarity(goblin_curse, epic).
-elixir_cost(goblin_curse, 2).
-in_arena(goblin_curse, serenity_peak).
-damage_per_second(goblin_curse, 30).
-targets(goblin_curse, air).
-targets(goblin_curse, ground).
-splash(goblin_curse, false).
-
-card(rage, spell).
-has_rarity(rage, epic).
-elixir_cost(rage, 2).
-in_arena(rage, serenity_peak).
-damage(rage, 179).
-targets(rage, buildings).
-splash(rage, false).
-
-card(royal_delivery, spell).
-has_rarity(royal_delivery, common).
-elixir_cost(royal_delivery, 3).
-in_arena(royal_delivery, serenity_peak).
-targets(royal_delivery, air).
-targets(royal_delivery, ground).
-splash(royal_delivery, false).
-
-card(night_witch, troop).
-has_rarity(night_witch, legendary).
-elixir_cost(night_witch, 4).
-in_arena(night_witch, serenity_peak).
-transport(night_witch, ground).
-targets(night_witch, ground).
-splash(night_witch, false).
-melee_or_ranged(night_witch, melee).
-count(night_witch, 1).
-
 card(mother_witch, troop).
 has_rarity(mother_witch, legendary).
 elixir_cost(mother_witch, 4).
@@ -1911,27 +1301,10 @@ melee_or_ranged(mother_witch, ranged).
 range_value(mother_witch, 5).
 count(mother_witch, 1).
 
-card(elixir_golem, troop).
-has_rarity(elixir_golem, rare).
-elixir_cost(elixir_golem, 3).
-in_arena(elixir_golem, serenity_peak).
-transport(elixir_golem, ground).
-targets(elixir_golem, buildings).
-splash(elixir_golem, false).
-melee_or_ranged(elixir_golem, melee).
-count(elixir_golem, 1).
-
 card(elixir_collector, building).
 has_rarity(elixir_collector, rare).
 elixir_cost(elixir_collector, 6).
 in_arena(elixir_collector, serenity_peak).
-hitpoints(elixir_collector, 1070).
-splash(elixir_collector, false).
-
-card(elixir_collector, building).
-has_rarity(elixir_collector, rare).
-elixir_cost(elixir_collector, 6).
-in_arena(elixir_collector, miners_mine).
 hitpoints(elixir_collector, 1070).
 splash(elixir_collector, false).
 
@@ -1996,18 +1369,6 @@ splash(goblin_machine, false).
 melee_or_ranged(goblin_machine, melee).
 count(goblin_machine, 1).
 
-card(mother_witch, troop).
-has_rarity(mother_witch, legendary).
-elixir_cost(mother_witch, 4).
-in_arena(mother_witch, miners_mine).
-transport(mother_witch, ground).
-targets(mother_witch, air).
-targets(mother_witch, ground).
-splash(mother_witch, false).
-melee_or_ranged(mother_witch, ranged).
-range_value(mother_witch, 5).
-count(mother_witch, 1).
-
 card(fisherman, troop).
 has_rarity(fisherman, legendary).
 elixir_cost(fisherman, 3).
@@ -2020,34 +1381,6 @@ targets(fisherman, ground).
 splash(fisherman, false).
 melee_or_ranged(fisherman, melee).
 count(fisherman, 1).
-
-card(clone, spell).
-has_rarity(clone, epic).
-elixir_cost(clone, 3).
-in_arena(clone, miners_mine).
-splash(clone, false).
-
-card(mirror, spell).
-has_rarity(mirror, epic).
-in_arena(mirror, miners_mine).
-splash(mirror, false).
-
-card(tornado, spell).
-has_rarity(tornado, epic).
-elixir_cost(tornado, 3).
-in_arena(tornado, miners_mine).
-damage(tornado, 84).
-targets(tornado, air).
-targets(tornado, ground).
-splash(tornado, false).
-
-card(void, spell).
-has_rarity(void, epic).
-elixir_cost(void, 3).
-in_arena(void, miners_mine).
-targets(void, air).
-targets(void, ground).
-splash(void, false).
 
 card(golden_knight, troop).
 has_rarity(golden_knight, champion).

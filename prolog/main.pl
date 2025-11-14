@@ -1,4 +1,3 @@
-:- consult('kb.pl').
 :- consult('rules.pl').
 :- consult('cards.pl').
 
