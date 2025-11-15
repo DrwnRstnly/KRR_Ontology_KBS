@@ -163,13 +163,17 @@ card(goblin_cage, building).
 has_rarity(goblin_cage, rare).
 elixir_cost(goblin_cage, 4).
 in_arena(goblin_cage, goblin_stadium).
+hitpoints(goblin_cage, 780).
 splash(goblin_cage, false).
+% !!! WARNING: goblin_cage is missing: damage, targets
 
 card(goblin_hut, building).
 has_rarity(goblin_hut, rare).
 elixir_cost(goblin_hut, 4).
 in_arena(goblin_hut, goblin_stadium).
+hitpoints(goblin_hut, 1228).
 splash(goblin_hut, false).
+% !!! WARNING: goblin_hut is missing: targets
 
 card(bomber, troop).
 has_rarity(bomber, common).
@@ -202,7 +206,9 @@ card(tombstone, building).
 has_rarity(tombstone, rare).
 elixir_cost(tombstone, 3).
 in_arena(tombstone, bone_pit).
+hitpoints(tombstone, 529).
 splash(tombstone, false).
+% !!! WARNING: tombstone is missing: targets
 
 card(valkyrie, troop).
 has_rarity(valkyrie, rare).
@@ -260,11 +266,14 @@ card(battle_ram, troop).
 has_rarity(battle_ram, rare).
 elixir_cost(battle_ram, 4).
 in_arena(battle_ram, barbarian_bowl).
+hitpoints(battle_ram, 967).
+damage(battle_ram, 286).
 transport(battle_ram, ground).
 targets(battle_ram, buildings).
 splash(battle_ram, false).
 melee_or_ranged(battle_ram, melee).
 count(battle_ram, 1).
+% !!! WARNING: battle_ram is missing: damage_per_second
 
 card(electro_spirit, troop).
 has_rarity(electro_spirit, common).
@@ -279,6 +288,7 @@ splash(electro_spirit, false).
 melee_or_ranged(electro_spirit, ranged).
 range_value(electro_spirit, 2).
 count(electro_spirit, 1).
+% !!! WARNING: electro_spirit is missing: damage_per_second
 
 card(skeleton_dragons, troop).
 has_rarity(skeleton_dragons, common).
@@ -308,6 +318,7 @@ splash(fire_spirit, true).
 melee_or_ranged(fire_spirit, ranged).
 range_value(fire_spirit, 2).
 count(fire_spirit, 1).
+% !!! WARNING: fire_spirit is missing: damage_per_second
 
 card(bomb_tower, building).
 has_rarity(bomb_tower, rare).
@@ -426,6 +437,7 @@ has_rarity(goblin_barrel, epic).
 elixir_cost(goblin_barrel, 3).
 in_arena(goblin_barrel, pekkas_playhouse).
 splash(goblin_barrel, false).
+% !!! WARNING: goblin_barrel is missing: damage
 
 card(guards, troop).
 has_rarity(guards, epic).
@@ -611,6 +623,7 @@ targets(ice_spirit, ground).
 splash(ice_spirit, true).
 melee_or_ranged(ice_spirit, ranged).
 range_value(ice_spirit, 2).
+% !!! WARNING: ice_spirit is missing: damage_per_second
 
 card(battle_healer, troop).
 has_rarity(battle_healer, rare).
@@ -647,6 +660,7 @@ targets(vines, air).
 targets(vines, ground).
 splash(vines, false).
 count(vines, 3).
+% !!! WARNING: vines is missing: damage
 
 card(lightning, spell).
 has_rarity(lightning, epic).
@@ -709,10 +723,12 @@ card(skeleton_barrel, troop).
 has_rarity(skeleton_barrel, common).
 elixir_cost(skeleton_barrel, 3).
 in_arena(skeleton_barrel, jungle_arena).
+hitpoints(skeleton_barrel, 532).
 transport(skeleton_barrel, air).
 targets(skeleton_barrel, buildings).
 splash(skeleton_barrel, false).
 melee_or_ranged(skeleton_barrel, melee).
+% !!! WARNING: skeleton_barrel is missing: damage, damage_per_second
 
 card(goblin_gang, troop).
 has_rarity(goblin_gang, common).
@@ -723,12 +739,15 @@ targets(goblin_gang, ground).
 splash(goblin_gang, false).
 melee_or_ranged(goblin_gang, melee).
 count(goblin_gang, 3).
+% !!! WARNING: goblin_gang is missing: hitpoints, damage, damage_per_second
 
 card(barbarian_hut, building).
 has_rarity(barbarian_hut, rare).
 elixir_cost(barbarian_hut, 6).
 in_arena(barbarian_hut, jungle_arena).
+hitpoints(barbarian_hut, 1164).
 splash(barbarian_hut, false).
+% !!! WARNING: barbarian_hut is missing: targets
 
 card(dart_goblin, troop).
 has_rarity(dart_goblin, rare).
@@ -749,6 +768,7 @@ card(barbarian_barrel, spell).
 has_rarity(barbarian_barrel, epic).
 elixir_cost(barbarian_barrel, 2).
 in_arena(barbarian_barrel, jungle_arena).
+damage(barbarian_barrel, 240).
 targets(barbarian_barrel, ground).
 splash(barbarian_barrel, false).
 melee_or_ranged(barbarian_barrel, ranged).
@@ -762,6 +782,7 @@ damage_per_second(poison, 92).
 targets(poison, air).
 targets(poison, ground).
 splash(poison, false).
+% !!! WARNING: poison is missing: damage
 
 card(rune_giant, troop).
 has_rarity(rune_giant, epic).
@@ -771,6 +792,7 @@ hitpoints(rune_giant, 2662).
 damage(rune_giant, 120).
 damage_per_second(rune_giant, 80).
 transport(rune_giant, ground).
+targets(rune_giant, buildings).
 splash(rune_giant, false).
 melee_or_ranged(rune_giant, melee).
 count(rune_giant, 1).
@@ -779,6 +801,9 @@ card(goblin_giant, troop).
 has_rarity(goblin_giant, epic).
 elixir_cost(goblin_giant, 6).
 in_arena(goblin_giant, jungle_arena).
+hitpoints(goblin_giant, 3022).
+damage(goblin_giant, 176).
+damage_per_second(goblin_giant, 117).
 transport(goblin_giant, ground).
 targets(goblin_giant, buildings).
 splash(goblin_giant, false).
@@ -830,6 +855,9 @@ card(furnace, troop).
 has_rarity(furnace, rare).
 elixir_cost(furnace, 4).
 in_arena(furnace, hog_mountain).
+hitpoints(furnace, 727).
+damage(furnace, 179).
+damage_per_second(furnace, 99).
 transport(furnace, ground).
 targets(furnace, air).
 targets(furnace, ground).
@@ -884,6 +912,9 @@ card(golem, troop).
 has_rarity(golem, epic).
 elixir_cost(golem, 8).
 in_arena(golem, hog_mountain).
+hitpoints(golem, 5120).
+damage(golem, 312).
+damage_per_second(golem, 124).
 transport(golem, ground).
 targets(golem, buildings).
 splash(golem, false).
@@ -923,6 +954,7 @@ targets(ram_rider, buildings).
 splash(ram_rider, false).
 melee_or_ranged(ram_rider, melee).
 count(ram_rider, 1).
+% !!! WARNING: ram_rider is missing: damage, damage_per_second
 
 card(electro_wizard, troop).
 has_rarity(electro_wizard, legendary).
@@ -1070,12 +1102,14 @@ targets(wall_breakers, buildings).
 splash(wall_breakers, true).
 melee_or_ranged(wall_breakers, melee).
 count(wall_breakers, 2).
+% !!! WARNING: wall_breakers is missing: damage_per_second
 
 card(graveyard, spell).
 has_rarity(graveyard, legendary).
 elixir_cost(graveyard, 5).
 in_arena(graveyard, spooky_town).
 splash(graveyard, false).
+% !!! WARNING: graveyard is missing: damage
 
 card(phoenix, troop).
 has_rarity(phoenix, legendary).
@@ -1128,6 +1162,7 @@ targets(rascals, ground).
 splash(rascals, false).
 melee_or_ranged(rascals, melee).
 count(rascals, 1).
+% !!! WARNING: rascals is missing: hitpoints, damage, damage_per_second
 
 card(heal_spirit, troop).
 has_rarity(heal_spirit, rare).
@@ -1141,6 +1176,7 @@ targets(heal_spirit, ground).
 splash(heal_spirit, true).
 melee_or_ranged(heal_spirit, ranged).
 range_value(heal_spirit, 2).
+% !!! WARNING: heal_spirit is missing: damage_per_second
 
 card(suspicious_bush, troop).
 has_rarity(suspicious_bush, rare).
@@ -1151,6 +1187,7 @@ targets(suspicious_bush, buildings).
 splash(suspicious_bush, false).
 melee_or_ranged(suspicious_bush, melee).
 count(suspicious_bush, 1).
+% !!! WARNING: suspicious_bush is missing: hitpoints, damage, damage_per_second
 
 card(electro_giant, troop).
 has_rarity(electro_giant, epic).
@@ -1211,6 +1248,9 @@ card(lava_hound, troop).
 has_rarity(lava_hound, legendary).
 elixir_cost(lava_hound, 7).
 in_arena(lava_hound, rascals_hideout).
+hitpoints(lava_hound, 3581).
+damage(lava_hound, 53).
+damage_per_second(lava_hound, 40).
 transport(lava_hound, air).
 targets(lava_hound, buildings).
 splash(lava_hound, false).
@@ -1234,6 +1274,7 @@ card(royal_delivery, spell).
 has_rarity(royal_delivery, common).
 elixir_cost(royal_delivery, 3).
 in_arena(royal_delivery, serenity_peak).
+damage(royal_delivery, 437).
 targets(royal_delivery, air).
 targets(royal_delivery, ground).
 splash(royal_delivery, false).
@@ -1242,6 +1283,9 @@ card(elixir_golem, troop).
 has_rarity(elixir_golem, rare).
 elixir_cost(elixir_golem, 3).
 in_arena(elixir_golem, serenity_peak).
+hitpoints(elixir_golem, 1569).
+damage(elixir_golem, 253).
+damage_per_second(elixir_golem, 229).
 transport(elixir_golem, ground).
 targets(elixir_golem, buildings).
 splash(elixir_golem, false).
@@ -1256,6 +1300,7 @@ damage_per_second(goblin_curse, 30).
 targets(goblin_curse, air).
 targets(goblin_curse, ground).
 splash(goblin_curse, false).
+% !!! WARNING: goblin_curse is missing: damage
 
 card(rage, spell).
 has_rarity(rage, epic).
@@ -1269,7 +1314,9 @@ card(goblin_drill, building).
 has_rarity(goblin_drill, epic).
 elixir_cost(goblin_drill, 4).
 in_arena(goblin_drill, serenity_peak).
+hitpoints(goblin_drill, 1313).
 splash(goblin_drill, false).
+% !!! WARNING: goblin_drill is missing: damage, targets
 
 card(executioner, troop).
 has_rarity(executioner, epic).
@@ -1290,6 +1337,9 @@ card(night_witch, troop).
 has_rarity(night_witch, legendary).
 elixir_cost(night_witch, 4).
 in_arena(night_witch, serenity_peak).
+hitpoints(night_witch, 906).
+damage(night_witch, 314).
+damage_per_second(night_witch, 241).
 transport(night_witch, ground).
 targets(night_witch, ground).
 splash(night_witch, false).
@@ -1301,6 +1351,8 @@ has_rarity(lumberjack, legendary).
 elixir_cost(lumberjack, 4).
 in_arena(lumberjack, serenity_peak).
 hitpoints(lumberjack, 1282).
+damage(lumberjack, 256).
+damage_per_second(lumberjack, 320).
 transport(lumberjack, ground).
 targets(lumberjack, ground).
 splash(lumberjack, false).
@@ -1310,6 +1362,9 @@ card(mother_witch, troop).
 has_rarity(mother_witch, legendary).
 elixir_cost(mother_witch, 4).
 in_arena(mother_witch, serenity_peak).
+hitpoints(mother_witch, 529).
+damage(mother_witch, 133).
+damage_per_second(mother_witch, 133).
 transport(mother_witch, ground).
 targets(mother_witch, air).
 targets(mother_witch, ground).
@@ -1324,6 +1379,7 @@ elixir_cost(elixir_collector, 6).
 in_arena(elixir_collector, serenity_peak).
 hitpoints(elixir_collector, 1070).
 splash(elixir_collector, false).
+% !!! WARNING: elixir_collector is missing: targets
 
 card(void, spell).
 has_rarity(void, epic).
@@ -1332,6 +1388,7 @@ in_arena(void, miners_mine).
 targets(void, air).
 targets(void, ground).
 splash(void, false).
+% !!! WARNING: void is missing: damage
 
 card(clone, spell).
 has_rarity(clone, epic).
@@ -1352,6 +1409,7 @@ card(mirror, spell).
 has_rarity(mirror, epic).
 in_arena(mirror, miners_mine).
 splash(mirror, false).
+% !!! WARNING: mirror is missing: elixir
 
 card(cannon_cart, troop).
 has_rarity(cannon_cart, epic).
@@ -1374,6 +1432,7 @@ in_arena(spirit_empress, miners_mine).
 damage(spirit_empress, 307).
 splash(spirit_empress, false).
 count(spirit_empress, 1).
+% !!! WARNING: spirit_empress is missing: hitpoints, damage_per_second, transport, targets, range (melee/ranged)
 
 card(goblin_machine, troop).
 has_rarity(goblin_machine, legendary).
@@ -1418,6 +1477,9 @@ card(skeleton_king, troop).
 has_rarity(skeleton_king, champion).
 elixir_cost(skeleton_king, 4).
 in_arena(skeleton_king, executioners_kitchen).
+hitpoints(skeleton_king, 2298).
+damage(skeleton_king, 204).
+damage_per_second(skeleton_king, 127).
 transport(skeleton_king, ground).
 targets(skeleton_king, ground).
 splash(skeleton_king, true).
@@ -1476,11 +1538,14 @@ splash(goblinstein, false).
 melee_or_ranged(goblinstein, ranged).
 range_value(goblinstein, 5).
 count(goblinstein, 1).
+% !!! WARNING: goblinstein is missing: hitpoints, damage, damage_per_second
 
 card(little_prince, troop).
 has_rarity(little_prince, champion).
 elixir_cost(little_prince, 3).
 in_arena(little_prince, silent_sanctuary).
+hitpoints(little_prince, 698).
+damage(little_prince, 99).
 transport(little_prince, ground).
 targets(little_prince, air).
 targets(little_prince, ground).
@@ -1488,6 +1553,7 @@ splash(little_prince, false).
 melee_or_ranged(little_prince, ranged).
 range_value(little_prince, 5).
 count(little_prince, 1).
+% !!! WARNING: little_prince is missing: damage_per_second
 
 card(monk, troop).
 has_rarity(monk, champion).

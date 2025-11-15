@@ -2905,7 +2905,7 @@
           "Speed": "Medium",
           "Deploy Time": "1 sec",
           "Range": "Melee: Medium",
-          "Target": "Building",
+          "Target": "Buildings",
           "Count": "x1",
           "Transport": "Ground",
           "Type": "Troop",
