@@ -1134,7 +1134,7 @@ damage(royal_ghost, 261).
 damage_per_second(royal_ghost, 145).
 transport(royal_ghost, ground).
 targets(royal_ghost, ground).
-splash(royal_ghost, false).
+splash(royal_ghost, true).
 melee_or_ranged(royal_ghost, melee).
 count(royal_ghost, 1).
 
