@@ -18,27 +18,6 @@ can_hit_air(Card) :-
 is_spell(Card) :-
     card(Card, spell).
 
-is_unit(Card) :-
-    card(Card, troop).
-is_unit(Card) :-
-    card(Card, building).
-
-is_ranged_troop(Card) :-
-    card(Card, troop),
-    has_damage_type(Card, ranged).
-
-is_cycle_card(Card) :-
-    elixir_cost(Card, Cost),
-    Cost =< 2.
-
-is_tank(Card) :-
-    hitpoints(Card, HP),
-    HP > 800.
-
-is_fast_troop(Card) :-
-    card(Card, troop),
-    has_speed_class(Card, fast).
-
 get_elixir_costs(Deck, Costs) :-
     findall(Cost, (member(Card, Deck), elixir_cost(Card, Cost)), Costs).
 
@@ -53,11 +32,34 @@ calculate_avg_elixir(Deck, Avg) :-
 is_anti_tank(Card) :-
     member(Card, [mighty_miner, sparky, pekka, inferno_dragon, prince, hunter, three_musketeers, inferno_tower, mini_p_e_k_k_a, elite_barbarians, skeleton_army, goblins, goblin_gang, guards, minion_horde]).
 
-role(Card, tank) :- is_tank(Card), has_speed_class(Card, slow).
-role(Card, support) :- is_ranged_troop(Card).
-role(Card, wincon) :- is_wincon_card(Card).
-role(Card, cycle) :- is_cycle_card(Card).
-role(Card, spell) :- card(Card, spell).
+is_small_spell(Card) :-
+    is_spell(Card),
+    elixir_cost(Card, Cost),
+    Cost =< 3.
+
+is_big_spell(Card) :-
+    is_spell(Card),
+    elixir_cost(Card, Cost),
+    Cost > 3.
+
+is_building(Card) :-
+    card(Card, building).
+
+is_reset_card(Card) :-
+    member(Card, [electro_spirit, electro_wizard, electro_dragon, zap, vines, ice_spirit, lightning, freeze]).
+
+is_tank_or_mini_tank(Card) :-
+    card(Card, troop),
+    hitpoints(Card, HP),
+    HP > 1000.
+
+is_swarm_card(Card) :-
+    count(Card, Count),
+    Count >= 3.
+
+is_cycle_card(Card) :-
+    elixir_cost(Card, Cost),
+    Cost =< 2.
 
 info(Card) :-
     card(Card, Type),
@@ -83,6 +85,17 @@ warning_info(too_many_spells, strong, '> 4 spells - Not enough troops to defend 
 warning_info(too_expensive, strong, 'Elixir average >= 4.8 - Too slow to cycle, vulnerable to fast decks.').
 warning_info(no_anti_tank, strong, 'No anti-tank option - Cannot defend against heavy tanks (e.g., P.E.K.K.A, Golem).').
 
+warning_info(no_small_spell, weak, 'No small spell (<= 3 Elixir) - Struggles with swarms and chip.').
+warning_info(no_big_spell, weak, 'No big spell (> 3 Elixir) - Limited high spell damage and tower pressure.').
+warning_info(no_building, weak, 'No building - Harder to defend and control tempo.').
+warning_info(one_air_defense, weak, 'Only 1 air defense card - Risky against air-heavy decks.').
+warning_info(no_reset_card, weak, 'No reset card (e.g., Zap, E-Wiz) - Vulnerable to Inferno Tower/Dragon, Sparky.').
+warning_info(no_tank, weak, 'No tank or mini-tank - Difficulty absorbing damage for support troops.').
+warning_info(no_splash, weak, 'No splash damage - Struggles against swarm-heavy decks.').
+warning_info(no_swarm, weak, 'No swarm cards - Limited defensive versatility.').
+warning_info(too_cheap, weak, 'Elixir average <= 2.6 - May lack defensive power against heavy pushes.').
+warning_info(no_cheap_cycle, weak, 'No cheap cycle cards (1-2 elixir) - Slower cycle to win condition.').
+
 format_warning(strong, Text, FinalString) :-
     format(string(FinalString), 'Strong Warning: ~w', [Text]).
 
@@ -106,7 +119,7 @@ check_for_warning(Deck, FinalWarningString) :-
     format_warning(Type, Text, FinalWarningString).
 
 check_for_warning(Deck, FinalWarningString) :-
-    \+ (member(Card, Deck), is_unit(Card)),
+    \+ (member(Card, Deck), transport(Card, ground)),
     warning_info(no_ground_units, Type, Text),
     format_warning(Type, Text, FinalWarningString).
 
@@ -135,6 +148,58 @@ check_for_warning(Deck, FinalWarningString) :-
     warning_info(no_anti_tank, Type, Text),
     format_warning(Type, Text, FinalWarningString).
 
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_small_spell(Card)),
+    warning_info(no_small_spell, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_big_spell(Card)),
+    warning_info(no_big_spell, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_building(Card)),
+    warning_info(no_building, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    findall(Card, (member(Card, Deck), can_hit_air(Card)), AirCards),
+    length(AirCards, 1),
+    warning_info(one_air_defense, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_reset_card(Card)),
+    warning_info(no_reset_card, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_tank_or_mini_tank(Card)),
+    warning_info(no_tank, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), splash(Card, true)),
+    warning_info(no_splash, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_swarm_card(Card)),
+    warning_info(no_swarm, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    calculate_avg_elixir(Deck, Avg),
+    Avg > 0,
+    Avg =< 2.6,
+    warning_info(too_cheap, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
+
+check_for_warning(Deck, FinalWarningString) :-
+    \+ (member(Card, Deck), is_cycle_card(Card)),
+    warning_info(no_cheap_cycle, Type, Text),
+    format_warning(Type, Text, FinalWarningString).
 
 find_warnings(Deck, Warnings) :-
     findall(Warning, check_for_warning(Deck, Warning), Warnings).

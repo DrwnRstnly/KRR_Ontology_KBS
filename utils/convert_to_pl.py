@@ -1,19 +1,23 @@
 import json
 import re
 import sys
+from typing import Optional, Dict, Any
 
 def format_atom(name: str) -> str:
     if not name:
         return "unknown"
-
+    
     name_map = {
         "Mini P.E.K.K.A.": "mini_p_e_k_k_a",
         "P.E.K.K.A.": "pekka",
-        "X-Bow": "x_bow"
+        "X-Bow": "x_bow",
+        "Inferno Dragon": "inferno_dragon",
+        "Inferno Tower": "inferno_tower",
+        "Mighty Miner": "mighty_miner"
     }
     if name in name_map:
         return name_map[name]
-
+    
     s = name.lower()
     s = s.replace(' ', '_').replace('.', '').replace("'", "")
     s = re.sub(r'[^a-z0-9_]', '', s)
@@ -22,10 +26,29 @@ def format_atom(name: str) -> str:
 def to_number_maybe(x):
     if x is None:
         return None
+    
+    s = str(x).strip()
+    m = re.search(r"^([\d,\.]+)", s)
+    if not m:
+        return None
+        
+    s = m.group(1).replace(',', '')
+    
+    if not s:
+        return None
     try:
-        return int(float(x))
+        return int(float(s))
     except (ValueError, TypeError):
         return None
+
+def find_stat_case_insensitive(stats_dict: Optional[Dict[str, Any]], key_to_find: str) -> Optional[str]:
+    if not stats_dict:
+        return None
+    key_to_find_lower = key_to_find.lower()
+    for key, value in stats_dict.items():
+        if key.lower() == key_to_find_lower:
+            return value
+    return None
 
 def main():
     try:
@@ -54,9 +77,13 @@ def main():
         ":- discontiguous transport/2.",
         ":- discontiguous damage_per_second/2.",
         "",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+        "% Clash Royale Card Database",
+        "% Generated from fandom_arenas_cards.json",
+        "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
         "",
     ])
-
+    
     arena_names = {}
     processed_atoms = set()
 
@@ -68,19 +95,19 @@ def main():
 
     for arena_num, arena_data in data.items():
         arena_atom = arena_names.get(arena_num, "unknown_arena")
-
+        
         for card in arena_data.get("cards", []):
             card_name = card.get("name")
             if not card_name:
                 continue
-
-            atom = format_atom(card_name)
-            if atom in processed_atoms:
-                    continue
-
-            processed_atoms.add(atom)
             
-            card_type = str(card.get("type", "unknown")).lower()
+            atom = format_atom(card_name)
+            
+            if atom in processed_atoms:
+                continue
+            processed_atoms.add(atom)
+
+            card_type = str(card.get("type", "unknown")).lower().replace(' ', '_')
 
             prolog_facts.append(f"card({atom}, {card_type}).")
 
@@ -88,21 +115,44 @@ def main():
                 prolog_facts.append(f"has_rarity({atom}, {card['rarity'].lower()}).")
             if card.get("elixir"):
                 prolog_facts.append(f"elixir_cost({atom}, {int(card['elixir'])}).")
-
+            
             prolog_facts.append(f"in_arena({atom}, {arena_atom}).")
 
-            if to_number_maybe(card.get("damage")):
-                prolog_facts.append(f"damage({atom}, {to_number_maybe(card['damage'])}).")
-            if to_number_maybe(card.get("hitpoints")):
-                prolog_facts.append(f"hitpoints({atom}, {to_number_maybe(card['hitpoints'])}).")
-            if to_number_maybe(card.get("damage_per_second")):
-                prolog_facts.append(f"damage_per_second({atom}, {to_number_maybe(card['damage_per_second'])}).")
+            stats = card.get("level_11_stats")
+            
+            hp_val = find_stat_case_insensitive(stats, "Hitpoints")
+            hp_num = to_number_maybe(hp_val)
+            if hp_num:
+                prolog_facts.append(f"hitpoints({atom}, {hp_num}).")
 
+            dmg_val = None
+            dps_val = None
+
+            if atom in ["inferno_dragon", "inferno_tower", "mighty_miner"]:
+                dmg_val = find_stat_case_insensitive(stats, "Damage (Stage 3)")
+                dps_val = find_stat_case_insensitive(stats, "Damage per second (Stage 3)")
+            else:
+                dmg_val = (
+                    find_stat_case_insensitive(stats, "Area Damage") or
+                    find_stat_case_insensitive(stats, "Damage") or
+                    find_stat_case_insensitive(stats, "Spawn Damage") or 
+                    find_stat_case_insensitive(stats, "Dash Damage")
+                )
+                dps_val = find_stat_case_insensitive(stats, "Damage per second")
+
+            dmg_num = to_number_maybe(dmg_val)
+            dps_num = to_number_maybe(dps_val)
+
+            if dmg_num:
+                prolog_facts.append(f"damage({atom}, {dmg_num}).")
+            if dps_num:
+                prolog_facts.append(f"damage_per_second({atom}, {dps_num}).")
+            
             if card.get("transport"):
                 prolog_facts.append(f"transport({atom}, {card['transport'].lower()}).")
 
             attrs = card.get("unit_attributes", {})
-
+            
             targets = attrs.get("Target", "")
             if "Air & Ground" in targets:
                 prolog_facts.append(f"targets({atom}, air).")
@@ -113,10 +163,10 @@ def main():
                 prolog_facts.append(f"targets({atom}, air).")
             elif "Buildings" in targets:
                 prolog_facts.append(f"targets({atom}, buildings).")
-
+            
             has_splash = "Splash Radius" in attrs
             prolog_facts.append(f"splash({atom}, {str(has_splash).lower()}).")
-
+            
             range_str = attrs.get("Range")
             if range_str:
                 if "Melee" in range_str:
@@ -126,7 +176,7 @@ def main():
                     range_val = to_number_maybe(range_str)
                     if range_val:
                         prolog_facts.append(f"range_value({atom}, {range_val}).")
-
+            
             count_str = attrs.get("Count", "").replace('x', '')
             count_val = to_number_maybe(count_str)
             if count_val:
@@ -134,9 +184,9 @@ def main():
 
             prolog_facts.append("")
 
-    with open("cards.pl", "w", encoding="utf-8") as f:
+    with open("prolog/cards.pl", "w", encoding="utf-8") as f:
         f.write("\n".join(prolog_facts))
-
+        
     print("Successfully created 'cards.pl' with updated Level 11 stats.")
     print("\n---")
     print("Add the following facts to your 'kb.pl' file:")

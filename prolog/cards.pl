@@ -12,6 +12,10 @@
 :- discontiguous transport/2.
 :- discontiguous damage_per_second/2.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Clash Royale Card Database
+% Generated from fandom_arenas_cards.json
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 card(arrows, spell).
 has_rarity(arrows, common).
@@ -26,8 +30,9 @@ card(minions, troop).
 has_rarity(minions, common).
 elixir_cost(minions, 3).
 in_arena(minions, training_camp).
-damage(minions, 107).
 hitpoints(minions, 230).
+damage(minions, 107).
+damage_per_second(minions, 97).
 transport(minions, air).
 targets(minions, air).
 targets(minions, ground).
@@ -40,8 +45,9 @@ card(archers, troop).
 has_rarity(archers, common).
 elixir_cost(archers, 3).
 in_arena(archers, training_camp).
-damage(archers, 112).
 hitpoints(archers, 304).
+damage(archers, 112).
+damage_per_second(archers, 124).
 transport(archers, ground).
 targets(archers, air).
 targets(archers, ground).
@@ -54,8 +60,9 @@ card(knight, troop).
 has_rarity(knight, common).
 elixir_cost(knight, 3).
 in_arena(knight, training_camp).
-damage(knight, 202).
 hitpoints(knight, 1766).
+damage(knight, 202).
+damage_per_second(knight, 168).
 transport(knight, ground).
 targets(knight, ground).
 splash(knight, false).
@@ -75,8 +82,9 @@ card(mini_p_e_k_k_a, troop).
 has_rarity(mini_p_e_k_k_a, rare).
 elixir_cost(mini_p_e_k_k_a, 4).
 in_arena(mini_p_e_k_k_a, training_camp).
-damage(mini_p_e_k_k_a, 755).
 hitpoints(mini_p_e_k_k_a, 1433).
+damage(mini_p_e_k_k_a, 755).
+damage_per_second(mini_p_e_k_k_a, 471).
 transport(mini_p_e_k_k_a, ground).
 targets(mini_p_e_k_k_a, ground).
 splash(mini_p_e_k_k_a, false).
@@ -87,8 +95,8 @@ card(musketeer, troop).
 has_rarity(musketeer, rare).
 elixir_cost(musketeer, 4).
 in_arena(musketeer, training_camp).
-damage(musketeer, 217).
 hitpoints(musketeer, 721).
+damage(musketeer, 217).
 damage_per_second(musketeer, 217).
 transport(musketeer, ground).
 targets(musketeer, air).
@@ -102,8 +110,9 @@ card(giant, troop).
 has_rarity(giant, rare).
 elixir_cost(giant, 5).
 in_arena(giant, training_camp).
-damage(giant, 253).
 hitpoints(giant, 4090).
+damage(giant, 253).
+damage_per_second(giant, 168).
 transport(giant, ground).
 targets(giant, buildings).
 splash(giant, false).
@@ -113,8 +122,9 @@ count(giant, 1).
 card(tower_princess, tower_troop).
 has_rarity(tower_princess, common).
 in_arena(tower_princess, training_camp).
-damage(tower_princess, 109).
 hitpoints(tower_princess, 3052).
+damage(tower_princess, 109).
+damage_per_second(tower_princess, 136).
 targets(tower_princess, air).
 targets(tower_princess, ground).
 splash(tower_princess, false).
@@ -125,8 +135,8 @@ card(spear_goblins, troop).
 has_rarity(spear_goblins, common).
 elixir_cost(spear_goblins, 2).
 in_arena(spear_goblins, goblin_stadium).
-damage(spear_goblins, 81).
 hitpoints(spear_goblins, 133).
+damage(spear_goblins, 81).
 damage_per_second(spear_goblins, 47).
 transport(spear_goblins, ground).
 targets(spear_goblins, air).
@@ -140,8 +150,8 @@ card(goblins, troop).
 has_rarity(goblins, common).
 elixir_cost(goblins, 2).
 in_arena(goblins, goblin_stadium).
-damage(goblins, 120).
 hitpoints(goblins, 202).
+damage(goblins, 120).
 damage_per_second(goblins, 109).
 transport(goblins, ground).
 targets(goblins, ground).
@@ -165,8 +175,8 @@ card(bomber, troop).
 has_rarity(bomber, common).
 elixir_cost(bomber, 2).
 in_arena(bomber, bone_pit).
-damage(bomber, 225).
 hitpoints(bomber, 304).
+damage(bomber, 225).
 damage_per_second(bomber, 125).
 transport(bomber, ground).
 targets(bomber, ground).
@@ -179,8 +189,8 @@ card(skeletons, troop).
 has_rarity(skeletons, common).
 elixir_cost(skeletons, 1).
 in_arena(skeletons, bone_pit).
-damage(skeletons, 81).
 hitpoints(skeletons, 81).
+damage(skeletons, 81).
 damage_per_second(skeletons, 81).
 transport(skeletons, ground).
 targets(skeletons, ground).
@@ -198,8 +208,8 @@ card(valkyrie, troop).
 has_rarity(valkyrie, rare).
 elixir_cost(valkyrie, 4).
 in_arena(valkyrie, bone_pit).
-damage(valkyrie, 266).
 hitpoints(valkyrie, 1907).
+damage(valkyrie, 266).
 damage_per_second(valkyrie, 177).
 transport(valkyrie, ground).
 targets(valkyrie, ground).
@@ -211,8 +221,8 @@ card(cannon, building).
 has_rarity(cannon, common).
 elixir_cost(cannon, 3).
 in_arena(cannon, barbarian_bowl).
-damage(cannon, 212).
 hitpoints(cannon, 824).
+damage(cannon, 212).
 damage_per_second(cannon, 212).
 targets(cannon, ground).
 splash(cannon, false).
@@ -223,8 +233,8 @@ card(barbarians, troop).
 has_rarity(barbarians, common).
 elixir_cost(barbarians, 5).
 in_arena(barbarians, barbarian_bowl).
-damage(barbarians, 192).
 hitpoints(barbarians, 670).
+damage(barbarians, 192).
 damage_per_second(barbarians, 147).
 transport(barbarians, ground).
 targets(barbarians, ground).
@@ -236,8 +246,8 @@ card(mega_minion, troop).
 has_rarity(mega_minion, rare).
 elixir_cost(mega_minion, 3).
 in_arena(mega_minion, barbarian_bowl).
-damage(mega_minion, 312).
 hitpoints(mega_minion, 837).
+damage(mega_minion, 312).
 damage_per_second(mega_minion, 208).
 transport(mega_minion, air).
 targets(mega_minion, air).
@@ -260,8 +270,8 @@ card(electro_spirit, troop).
 has_rarity(electro_spirit, common).
 elixir_cost(electro_spirit, 1).
 in_arena(electro_spirit, spell_valley).
-damage(electro_spirit, 99).
 hitpoints(electro_spirit, 230).
+damage(electro_spirit, 99).
 transport(electro_spirit, ground).
 targets(electro_spirit, air).
 targets(electro_spirit, ground).
@@ -274,8 +284,8 @@ card(skeleton_dragons, troop).
 has_rarity(skeleton_dragons, common).
 elixir_cost(skeleton_dragons, 4).
 in_arena(skeleton_dragons, spell_valley).
-damage(skeleton_dragons, 161).
 hitpoints(skeleton_dragons, 560).
+damage(skeleton_dragons, 161).
 damage_per_second(skeleton_dragons, 84).
 transport(skeleton_dragons, air).
 targets(skeleton_dragons, air).
@@ -289,8 +299,8 @@ card(fire_spirit, troop).
 has_rarity(fire_spirit, common).
 elixir_cost(fire_spirit, 1).
 in_arena(fire_spirit, spell_valley).
-damage(fire_spirit, 207).
 hitpoints(fire_spirit, 230).
+damage(fire_spirit, 207).
 transport(fire_spirit, ground).
 targets(fire_spirit, air).
 targets(fire_spirit, ground).
@@ -303,8 +313,8 @@ card(bomb_tower, building).
 has_rarity(bomb_tower, rare).
 elixir_cost(bomb_tower, 4).
 in_arena(bomb_tower, spell_valley).
-damage(bomb_tower, 222).
 hitpoints(bomb_tower, 1356).
+damage(bomb_tower, 222).
 damage_per_second(bomb_tower, 123).
 targets(bomb_tower, ground).
 splash(bomb_tower, true).
@@ -316,6 +326,8 @@ has_rarity(inferno_tower, rare).
 elixir_cost(inferno_tower, 5).
 in_arena(inferno_tower, spell_valley).
 hitpoints(inferno_tower, 1748).
+damage(inferno_tower, 847).
+damage_per_second(inferno_tower, 2117).
 targets(inferno_tower, air).
 targets(inferno_tower, ground).
 splash(inferno_tower, false).
@@ -326,8 +338,8 @@ card(wizard, troop).
 has_rarity(wizard, rare).
 elixir_cost(wizard, 5).
 in_arena(wizard, spell_valley).
-damage(wizard, 281).
 hitpoints(wizard, 755).
+damage(wizard, 281).
 damage_per_second(wizard, 200).
 transport(wizard, ground).
 targets(wizard, air).
@@ -350,19 +362,20 @@ card(mortar, building).
 has_rarity(mortar, common).
 elixir_cost(mortar, 4).
 in_arena(mortar, builders_workshop).
-damage(mortar, 266).
 hitpoints(mortar, 1369).
+damage(mortar, 266).
 damage_per_second(mortar, 53).
 targets(mortar, ground).
 splash(mortar, true).
 melee_or_ranged(mortar, ranged).
+range_value(mortar, 3).
 
 card(bats, troop).
 has_rarity(bats, common).
 elixir_cost(bats, 2).
 in_arena(bats, builders_workshop).
-damage(bats, 81).
 hitpoints(bats, 81).
+damage(bats, 81).
 damage_per_second(bats, 62).
 transport(bats, air).
 targets(bats, air).
@@ -384,8 +397,8 @@ card(flying_machine, troop).
 has_rarity(flying_machine, rare).
 elixir_cost(flying_machine, 4).
 in_arena(flying_machine, builders_workshop).
-damage(flying_machine, 171).
 hitpoints(flying_machine, 614).
+damage(flying_machine, 171).
 damage_per_second(flying_machine, 155).
 transport(flying_machine, air).
 targets(flying_machine, air).
@@ -399,8 +412,8 @@ card(hog_rider, troop).
 has_rarity(hog_rider, rare).
 elixir_cost(hog_rider, 4).
 in_arena(hog_rider, builders_workshop).
-damage(hog_rider, 317).
 hitpoints(hog_rider, 1697).
+damage(hog_rider, 317).
 damage_per_second(hog_rider, 198).
 transport(hog_rider, ground).
 targets(hog_rider, buildings).
@@ -418,8 +431,8 @@ card(guards, troop).
 has_rarity(guards, epic).
 elixir_cost(guards, 3).
 in_arena(guards, pekkas_playhouse).
-damage(guards, 117).
 hitpoints(guards, 81).
+damage(guards, 117).
 damage_per_second(guards, 117).
 transport(guards, ground).
 targets(guards, ground).
@@ -431,8 +444,8 @@ card(baby_dragon, troop).
 has_rarity(baby_dragon, epic).
 elixir_cost(baby_dragon, 4).
 in_arena(baby_dragon, pekkas_playhouse).
-damage(baby_dragon, 161).
 hitpoints(baby_dragon, 1152).
+damage(baby_dragon, 161).
 damage_per_second(baby_dragon, 107).
 transport(baby_dragon, air).
 targets(baby_dragon, air).
@@ -446,8 +459,8 @@ card(skeleton_army, troop).
 has_rarity(skeleton_army, epic).
 elixir_cost(skeleton_army, 3).
 in_arena(skeleton_army, pekkas_playhouse).
-damage(skeleton_army, 81).
 hitpoints(skeleton_army, 81).
+damage(skeleton_army, 81).
 damage_per_second(skeleton_army, 81).
 transport(skeleton_army, ground).
 targets(skeleton_army, ground).
@@ -459,8 +472,8 @@ card(witch, troop).
 has_rarity(witch, epic).
 elixir_cost(witch, 5).
 in_arena(witch, pekkas_playhouse).
-damage(witch, 135).
 hitpoints(witch, 839).
+damage(witch, 135).
 damage_per_second(witch, 122).
 transport(witch, ground).
 targets(witch, air).
@@ -474,8 +487,8 @@ card(pekka, troop).
 has_rarity(pekka, epic).
 elixir_cost(pekka, 7).
 in_arena(pekka, pekkas_playhouse).
-damage(pekka, 816).
 hitpoints(pekka, 3760).
+damage(pekka, 816).
 damage_per_second(pekka, 453).
 transport(pekka, ground).
 targets(pekka, ground).
@@ -487,8 +500,8 @@ card(royal_recruits, troop).
 has_rarity(royal_recruits, common).
 elixir_cost(royal_recruits, 7).
 in_arena(royal_recruits, royal_arena).
-damage(royal_recruits, 133).
 hitpoints(royal_recruits, 547).
+damage(royal_recruits, 133).
 damage_per_second(royal_recruits, 102).
 transport(royal_recruits, ground).
 targets(royal_recruits, ground).
@@ -500,8 +513,8 @@ card(royal_giant, troop).
 has_rarity(royal_giant, common).
 elixir_cost(royal_giant, 6).
 in_arena(royal_giant, royal_arena).
-damage(royal_giant, 307).
 hitpoints(royal_giant, 3164).
+damage(royal_giant, 307).
 damage_per_second(royal_giant, 180).
 transport(royal_giant, ground).
 targets(royal_giant, buildings).
@@ -514,8 +527,8 @@ card(royal_hogs, troop).
 has_rarity(royal_hogs, rare).
 elixir_cost(royal_hogs, 5).
 in_arena(royal_hogs, royal_arena).
-damage(royal_hogs, 74).
 hitpoints(royal_hogs, 837).
+damage(royal_hogs, 74).
 damage_per_second(royal_hogs, 61).
 transport(royal_hogs, ground).
 targets(royal_hogs, buildings).
@@ -527,8 +540,8 @@ card(three_musketeers, troop).
 has_rarity(three_musketeers, rare).
 elixir_cost(three_musketeers, 9).
 in_arena(three_musketeers, royal_arena).
-damage(three_musketeers, 217).
 hitpoints(three_musketeers, 721).
+damage(three_musketeers, 217).
 damage_per_second(three_musketeers, 217).
 transport(three_musketeers, ground).
 targets(three_musketeers, air).
@@ -542,8 +555,8 @@ card(dark_prince, troop).
 has_rarity(dark_prince, epic).
 elixir_cost(dark_prince, 4).
 in_arena(dark_prince, royal_arena).
-damage(dark_prince, 266).
 hitpoints(dark_prince, 1200).
+damage(dark_prince, 266).
 damage_per_second(dark_prince, 204).
 transport(dark_prince, ground).
 targets(dark_prince, ground).
@@ -555,8 +568,8 @@ card(prince, troop).
 has_rarity(prince, epic).
 elixir_cost(prince, 5).
 in_arena(prince, royal_arena).
-damage(prince, 391).
 hitpoints(prince, 1920).
+damage(prince, 391).
 damage_per_second(prince, 279).
 transport(prince, ground).
 targets(prince, ground).
@@ -568,8 +581,8 @@ card(balloon, troop).
 has_rarity(balloon, epic).
 elixir_cost(balloon, 5).
 in_arena(balloon, royal_arena).
-damage(balloon, 640).
 hitpoints(balloon, 1679).
+damage(balloon, 640).
 damage_per_second(balloon, 320).
 transport(balloon, air).
 targets(balloon, buildings).
@@ -590,8 +603,8 @@ card(ice_spirit, troop).
 has_rarity(ice_spirit, common).
 elixir_cost(ice_spirit, 1).
 in_arena(ice_spirit, frozen_peak).
-damage(ice_spirit, 110).
 hitpoints(ice_spirit, 230).
+damage(ice_spirit, 110).
 transport(ice_spirit, ground).
 targets(ice_spirit, air).
 targets(ice_spirit, ground).
@@ -603,8 +616,8 @@ card(battle_healer, troop).
 has_rarity(battle_healer, rare).
 elixir_cost(battle_healer, 4).
 in_arena(battle_healer, frozen_peak).
-damage(battle_healer, 148).
 hitpoints(battle_healer, 1717).
+damage(battle_healer, 148).
 damage_per_second(battle_healer, 98).
 transport(battle_healer, ground).
 targets(battle_healer, ground).
@@ -616,8 +629,8 @@ card(ice_golem, troop).
 has_rarity(ice_golem, rare).
 elixir_cost(ice_golem, 2).
 in_arena(ice_golem, frozen_peak).
-damage(ice_golem, 84).
 hitpoints(ice_golem, 1198).
+damage(ice_golem, 84).
 damage_per_second(ice_golem, 33).
 transport(ice_golem, ground).
 targets(ice_golem, buildings).
@@ -658,8 +671,8 @@ card(giant_skeleton, troop).
 has_rarity(giant_skeleton, epic).
 elixir_cost(giant_skeleton, 6).
 in_arena(giant_skeleton, frozen_peak).
-damage(giant_skeleton, 266).
 hitpoints(giant_skeleton, 3617).
+damage(giant_skeleton, 266).
 damage_per_second(giant_skeleton, 190).
 transport(giant_skeleton, ground).
 targets(giant_skeleton, ground).
@@ -670,8 +683,8 @@ count(giant_skeleton, 1).
 card(cannoneer, tower_troop).
 has_rarity(cannoneer, epic).
 in_arena(cannoneer, frozen_peak).
-damage(cannoneer, 320).
 hitpoints(cannoneer, 2616).
+damage(cannoneer, 320).
 damage_per_second(cannoneer, 145).
 targets(cannoneer, air).
 targets(cannoneer, ground).
@@ -683,8 +696,8 @@ card(berserker, troop).
 has_rarity(berserker, common).
 elixir_cost(berserker, 2).
 in_arena(berserker, jungle_arena).
-damage(berserker, 102).
 hitpoints(berserker, 896).
+damage(berserker, 102).
 damage_per_second(berserker, 170).
 transport(berserker, ground).
 targets(berserker, ground).
@@ -721,8 +734,8 @@ card(dart_goblin, troop).
 has_rarity(dart_goblin, rare).
 elixir_cost(dart_goblin, 3).
 in_arena(dart_goblin, jungle_arena).
-damage(dart_goblin, 156).
 hitpoints(dart_goblin, 261).
+damage(dart_goblin, 156).
 damage_per_second(dart_goblin, 195).
 transport(dart_goblin, ground).
 targets(dart_goblin, air).
@@ -754,8 +767,9 @@ card(rune_giant, troop).
 has_rarity(rune_giant, epic).
 elixir_cost(rune_giant, 4).
 in_arena(rune_giant, jungle_arena).
-damage(rune_giant, 120).
 hitpoints(rune_giant, 2662).
+damage(rune_giant, 120).
+damage_per_second(rune_giant, 80).
 transport(rune_giant, ground).
 splash(rune_giant, false).
 melee_or_ranged(rune_giant, melee).
@@ -775,8 +789,8 @@ card(tesla, building).
 has_rarity(tesla, common).
 elixir_cost(tesla, 4).
 in_arena(tesla, hog_mountain).
-damage(tesla, 220).
 hitpoints(tesla, 1152).
+damage(tesla, 220).
 damage_per_second(tesla, 199).
 targets(tesla, air).
 targets(tesla, ground).
@@ -788,8 +802,8 @@ card(elite_barbarians, troop).
 has_rarity(elite_barbarians, common).
 elixir_cost(elite_barbarians, 6).
 in_arena(elite_barbarians, hog_mountain).
-damage(elite_barbarians, 384).
 hitpoints(elite_barbarians, 1341).
+damage(elite_barbarians, 384).
 damage_per_second(elite_barbarians, 274).
 transport(elite_barbarians, ground).
 targets(elite_barbarians, ground).
@@ -801,8 +815,8 @@ card(minion_horde, troop).
 has_rarity(minion_horde, common).
 elixir_cost(minion_horde, 5).
 in_arena(minion_horde, hog_mountain).
-damage(minion_horde, 117).
 hitpoints(minion_horde, 230).
+damage(minion_horde, 117).
 damage_per_second(minion_horde, 117).
 transport(minion_horde, air).
 targets(minion_horde, air).
@@ -828,8 +842,8 @@ card(zappies, troop).
 has_rarity(zappies, rare).
 elixir_cost(zappies, 4).
 in_arena(zappies, hog_mountain).
-damage(zappies, 117).
 hitpoints(zappies, 529).
+damage(zappies, 117).
 damage_per_second(zappies, 55).
 transport(zappies, ground).
 targets(zappies, air).
@@ -843,8 +857,8 @@ card(x_bow, building).
 has_rarity(x_bow, epic).
 elixir_cost(x_bow, 6).
 in_arena(x_bow, hog_mountain).
-damage(x_bow, 43).
 hitpoints(x_bow, 1600).
+damage(x_bow, 43).
 damage_per_second(x_bow, 143).
 targets(x_bow, ground).
 splash(x_bow, false).
@@ -855,8 +869,8 @@ card(hunter, troop).
 has_rarity(hunter, epic).
 elixir_cost(hunter, 4).
 in_arena(hunter, hog_mountain).
-damage(hunter, 84).
 hitpoints(hunter, 885).
+damage(hunter, 84).
 damage_per_second(hunter, 381).
 transport(hunter, ground).
 targets(hunter, air).
@@ -890,8 +904,8 @@ card(mega_knight, troop).
 has_rarity(mega_knight, legendary).
 elixir_cost(mega_knight, 7).
 in_arena(mega_knight, electro_valley).
-damage(mega_knight, 268).
 hitpoints(mega_knight, 3993).
+damage(mega_knight, 268).
 damage_per_second(mega_knight, 157).
 transport(mega_knight, ground).
 targets(mega_knight, ground).
@@ -914,8 +928,8 @@ card(electro_wizard, troop).
 has_rarity(electro_wizard, legendary).
 elixir_cost(electro_wizard, 4).
 in_arena(electro_wizard, electro_valley).
-damage(electro_wizard, 115).
 hitpoints(electro_wizard, 714).
+damage(electro_wizard, 115).
 damage_per_second(electro_wizard, 127).
 transport(electro_wizard, ground).
 targets(electro_wizard, air).
@@ -929,6 +943,8 @@ has_rarity(inferno_dragon, legendary).
 elixir_cost(inferno_dragon, 4).
 in_arena(inferno_dragon, electro_valley).
 hitpoints(inferno_dragon, 1295).
+damage(inferno_dragon, 422).
+damage_per_second(inferno_dragon, 1055).
 transport(inferno_dragon, air).
 targets(inferno_dragon, air).
 targets(inferno_dragon, ground).
@@ -941,8 +957,8 @@ card(sparky, troop).
 has_rarity(sparky, legendary).
 elixir_cost(sparky, 6).
 in_arena(sparky, electro_valley).
-damage(sparky, 1331).
 hitpoints(sparky, 1451).
+damage(sparky, 1331).
 damage_per_second(sparky, 332).
 transport(sparky, ground).
 targets(sparky, ground).
@@ -955,8 +971,8 @@ card(miner, troop).
 has_rarity(miner, legendary).
 elixir_cost(miner, 3).
 in_arena(miner, electro_valley).
-damage(miner, 194).
 hitpoints(miner, 1210).
+damage(miner, 194).
 damage_per_second(miner, 149).
 transport(miner, ground).
 targets(miner, ground).
@@ -968,8 +984,8 @@ card(princess, troop).
 has_rarity(princess, legendary).
 elixir_cost(princess, 3).
 in_arena(princess, electro_valley).
-damage(princess, 168).
 hitpoints(princess, 261).
+damage(princess, 168).
 damage_per_second(princess, 56).
 transport(princess, ground).
 targets(princess, air).
@@ -982,8 +998,8 @@ count(princess, 1).
 card(dagger_duchess, tower_troop).
 has_rarity(dagger_duchess, legendary).
 in_arena(dagger_duchess, electro_valley).
-damage(dagger_duchess, 107).
 hitpoints(dagger_duchess, 2768).
+damage(dagger_duchess, 107).
 damage_per_second(dagger_duchess, 214).
 targets(dagger_duchess, air).
 targets(dagger_duchess, ground).
@@ -995,8 +1011,8 @@ card(firecracker, troop).
 has_rarity(firecracker, common).
 elixir_cost(firecracker, 3).
 in_arena(firecracker, spooky_town).
-damage(firecracker, 64).
 hitpoints(firecracker, 304).
+damage(firecracker, 64).
 damage_per_second(firecracker, 106).
 transport(firecracker, ground).
 targets(firecracker, air).
@@ -1018,8 +1034,9 @@ card(goblin_demolisher, troop).
 has_rarity(goblin_demolisher, rare).
 elixir_cost(goblin_demolisher, 4).
 in_arena(goblin_demolisher, spooky_town).
-damage(goblin_demolisher, 186).
 hitpoints(goblin_demolisher, 1300).
+damage(goblin_demolisher, 186).
+damage_per_second(goblin_demolisher, 155).
 transport(goblin_demolisher, ground).
 targets(goblin_demolisher, ground).
 splash(goblin_demolisher, true).
@@ -1031,8 +1048,8 @@ card(electro_dragon, troop).
 has_rarity(electro_dragon, epic).
 elixir_cost(electro_dragon, 5).
 in_arena(electro_dragon, spooky_town).
-damage(electro_dragon, 192).
 hitpoints(electro_dragon, 949).
+damage(electro_dragon, 192).
 damage_per_second(electro_dragon, 91).
 transport(electro_dragon, air).
 targets(electro_dragon, air).
@@ -1046,8 +1063,8 @@ card(wall_breakers, troop).
 has_rarity(wall_breakers, epic).
 elixir_cost(wall_breakers, 2).
 in_arena(wall_breakers, spooky_town).
-damage(wall_breakers, 391).
 hitpoints(wall_breakers, 330).
+damage(wall_breakers, 391).
 transport(wall_breakers, ground).
 targets(wall_breakers, buildings).
 splash(wall_breakers, true).
@@ -1064,8 +1081,8 @@ card(phoenix, troop).
 has_rarity(phoenix, legendary).
 elixir_cost(phoenix, 4).
 in_arena(phoenix, spooky_town).
-damage(phoenix, 217).
 hitpoints(phoenix, 1052).
+damage(phoenix, 217).
 damage_per_second(phoenix, 217).
 transport(phoenix, air).
 targets(phoenix, air).
@@ -1078,8 +1095,8 @@ card(royal_ghost, troop).
 has_rarity(royal_ghost, legendary).
 elixir_cost(royal_ghost, 3).
 in_arena(royal_ghost, spooky_town).
-damage(royal_ghost, 261).
 hitpoints(royal_ghost, 1210).
+damage(royal_ghost, 261).
 damage_per_second(royal_ghost, 145).
 transport(royal_ghost, ground).
 targets(royal_ghost, ground).
@@ -1091,8 +1108,8 @@ card(ice_wizard, troop).
 has_rarity(ice_wizard, legendary).
 elixir_cost(ice_wizard, 3).
 in_arena(ice_wizard, spooky_town).
-damage(ice_wizard, 89).
 hitpoints(ice_wizard, 688).
+damage(ice_wizard, 89).
 damage_per_second(ice_wizard, 52).
 transport(ice_wizard, ground).
 targets(ice_wizard, air).
@@ -1116,8 +1133,8 @@ card(heal_spirit, troop).
 has_rarity(heal_spirit, rare).
 elixir_cost(heal_spirit, 1).
 in_arena(heal_spirit, rascals_hideout).
-damage(heal_spirit, 110).
 hitpoints(heal_spirit, 230).
+damage(heal_spirit, 110).
 transport(heal_spirit, ground).
 targets(heal_spirit, air).
 targets(heal_spirit, ground).
@@ -1139,8 +1156,8 @@ card(electro_giant, troop).
 has_rarity(electro_giant, epic).
 elixir_cost(electro_giant, 7).
 in_arena(electro_giant, rascals_hideout).
-damage(electro_giant, 163).
 hitpoints(electro_giant, 3855).
+damage(electro_giant, 163).
 damage_per_second(electro_giant, 77).
 transport(electro_giant, ground).
 targets(electro_giant, buildings).
@@ -1152,8 +1169,8 @@ card(bowler, troop).
 has_rarity(bowler, epic).
 elixir_cost(bowler, 5).
 in_arena(bowler, rascals_hideout).
-damage(bowler, 289).
 hitpoints(bowler, 2081).
+damage(bowler, 289).
 damage_per_second(bowler, 115).
 transport(bowler, ground).
 targets(bowler, ground).
@@ -1166,8 +1183,8 @@ card(magic_archer, troop).
 has_rarity(magic_archer, legendary).
 elixir_cost(magic_archer, 4).
 in_arena(magic_archer, rascals_hideout).
-damage(magic_archer, 133).
 hitpoints(magic_archer, 529).
+damage(magic_archer, 133).
 damage_per_second(magic_archer, 120).
 transport(magic_archer, ground).
 targets(magic_archer, air).
@@ -1181,8 +1198,8 @@ card(bandit, troop).
 has_rarity(bandit, legendary).
 elixir_cost(bandit, 3).
 in_arena(bandit, rascals_hideout).
-damage(bandit, 194).
 hitpoints(bandit, 906).
+damage(bandit, 194).
 damage_per_second(bandit, 194).
 transport(bandit, ground).
 targets(bandit, ground).
@@ -1204,8 +1221,8 @@ count(lava_hound, 1).
 card(royal_chef, tower_troop).
 has_rarity(royal_chef, legendary).
 in_arena(royal_chef, rascals_hideout).
-damage(royal_chef, 109).
 hitpoints(royal_chef, 2703).
+damage(royal_chef, 109).
 damage_per_second(royal_chef, 109).
 targets(royal_chef, air).
 targets(royal_chef, ground).
@@ -1258,8 +1275,8 @@ card(executioner, troop).
 has_rarity(executioner, epic).
 elixir_cost(executioner, 5).
 in_arena(executioner, serenity_peak).
-damage(executioner, 168).
 hitpoints(executioner, 1280).
+damage(executioner, 168).
 damage_per_second(executioner, 140).
 transport(executioner, ground).
 targets(executioner, air).
@@ -1340,8 +1357,9 @@ card(cannon_cart, troop).
 has_rarity(cannon_cart, epic).
 elixir_cost(cannon_cart, 5).
 in_arena(cannon_cart, miners_mine).
-damage(cannon_cart, 212).
 hitpoints(cannon_cart, 1809).
+damage(cannon_cart, 212).
+damage_per_second(cannon_cart, 235).
 transport(cannon_cart, ground).
 targets(cannon_cart, ground).
 splash(cannon_cart, false).
@@ -1361,8 +1379,9 @@ card(goblin_machine, troop).
 has_rarity(goblin_machine, legendary).
 elixir_cost(goblin_machine, 5).
 in_arena(goblin_machine, miners_mine).
-damage(goblin_machine, 212).
 hitpoints(goblin_machine, 2150).
+damage(goblin_machine, 212).
+damage_per_second(goblin_machine, 176).
 transport(goblin_machine, ground).
 targets(goblin_machine, ground).
 splash(goblin_machine, false).
@@ -1373,8 +1392,8 @@ card(fisherman, troop).
 has_rarity(fisherman, legendary).
 elixir_cost(fisherman, 3).
 in_arena(fisherman, miners_mine).
-damage(fisherman, 194).
 hitpoints(fisherman, 870).
+damage(fisherman, 194).
 damage_per_second(fisherman, 149).
 transport(fisherman, ground).
 targets(fisherman, ground).
@@ -1386,8 +1405,8 @@ card(golden_knight, troop).
 has_rarity(golden_knight, champion).
 elixir_cost(golden_knight, 4).
 in_arena(golden_knight, executioners_kitchen).
-damage(golden_knight, 161).
 hitpoints(golden_knight, 1799).
+damage(golden_knight, 161).
 damage_per_second(golden_knight, 178).
 transport(golden_knight, ground).
 targets(golden_knight, ground).
@@ -1409,8 +1428,8 @@ card(boss_bandit, troop).
 has_rarity(boss_bandit, champion).
 elixir_cost(boss_bandit, 6).
 in_arena(boss_bandit, royal_crypt).
-damage(boss_bandit, 268).
 hitpoints(boss_bandit, 2624).
+damage(boss_bandit, 268).
 damage_per_second(boss_bandit, 223).
 transport(boss_bandit, ground).
 targets(boss_bandit, ground).
@@ -1422,8 +1441,8 @@ card(archer_queen, troop).
 has_rarity(archer_queen, champion).
 elixir_cost(archer_queen, 5).
 in_arena(archer_queen, royal_crypt).
-damage(archer_queen, 225).
 hitpoints(archer_queen, 1000).
+damage(archer_queen, 225).
 damage_per_second(archer_queen, 187).
 transport(archer_queen, ground).
 targets(archer_queen, air).
@@ -1438,6 +1457,8 @@ has_rarity(mighty_miner, champion).
 elixir_cost(mighty_miner, 4).
 in_arena(mighty_miner, royal_crypt).
 hitpoints(mighty_miner, 2250).
+damage(mighty_miner, 409).
+damage_per_second(mighty_miner, 1022).
 transport(mighty_miner, ground).
 targets(mighty_miner, ground).
 splash(mighty_miner, false).
@@ -1472,8 +1493,8 @@ card(monk, troop).
 has_rarity(monk, champion).
 elixir_cost(monk, 5).
 in_arena(monk, silent_sanctuary).
-damage(monk, 140).
 hitpoints(monk, 2150).
+damage(monk, 140).
 damage_per_second(monk, 175).
 transport(monk, ground).
 targets(monk, ground).
